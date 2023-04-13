@@ -251,16 +251,16 @@
         if (page === 'works') { 
             // 顯示作品集
             $('.worksPage').show()
-            $('.toabout').show();
             $('.toworks').hide();
+            $('.toabout').show();
 
         } else if (page === 'about') {
             // 顯示基本資料
             $('.aboutPage').show()
-            $('.toabout').hidw();
+            $('.toabout').hide();
             $('.toworks').show();
         } 
-        history.pushState(null, null, page)
+        // history.pushState(null, null, page)
     }
   
   </script>
