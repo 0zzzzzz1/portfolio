@@ -1,6 +1,5 @@
 body {
   width: 100vw;
-  height: 100vh;
   margin: 0;
   padding: 0;
   display: flex;
@@ -27,6 +26,34 @@ body {
   font-size: 20px;
   letter-spacing: 2px;
   color: rgb(255, 255, 255);
+}
+
+.btnUpDown {
+  display: flex;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 100;
+}
+.btnUpDown .btn {
+  width: 7vw;
+  height: 100px;
+  background-color: rgb(235, 87, 87);
+  font-size: 24px;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 300;
+  letter-spacing: 5%;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.btnUpDown .arrow {
+  margin-left: 20px;
+  width: 20px;
+  height: 70px;
+  background: no-repeat center 100%/cover url("../img/arrow.svg");
 }
 
 .main {
@@ -175,35 +202,28 @@ body {
   color: rgb(189, 189, 189);
   margin-top: 10px;
 }
-
-.btnUpDown {
-  display: flex;
+.main .footer {
   margin-left: 90px;
-  position: fixed;
-  z-index: 100;
-}
-.btnUpDown .btn {
-  width: 170px;
+  width: 89.8%;
   height: 70px;
-  background-color: rgb(242, 242, 242);
-  font-size: 24px;
-  font-family: "Montserrat", "Noto Sans JP", sans-serif;
-  color: rgb(51, 51, 51);
+  box-sizing: border-box;
+  position: relative;
+  border-left: solid 0.5px rgb(189, 189, 189);
+  border-right: solid 0.5px rgb(189, 189, 189);
+  border-top: solid 0.5px rgb(189, 189, 189);
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-decoration: none;
-}
-.btnUpDown .arrow {
-  margin-left: 20px;
-  width: 20px;
-  height: 70px;
-  background: no-repeat center 100%/cover url("../img/arrow.svg");
+  justify-content: space-between;
+  margin-top: 150px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
 }
 
 .works {
-  margin-top: 1080px;
-  padding-top: 70px;
+  padding-top: 100px;
   padding-left: 7vw;
   margin-bottom: 100px;
   width: 93vw;
@@ -215,15 +235,11 @@ body {
   line-height: 29px;
   letter-spacing: 2%;
 }
-.works .arrow {
-  transform: rotate(0.5turn);
-}
 .works .worksBox {
   width: 93vw;
   overflow-x: hidden;
   position: absolute;
   padding-left: 90px;
-  top: 220px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -296,6 +312,9 @@ body {
   margin-top: 100px;
   padding-left: 30px;
   padding-right: 30px;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
 }
 
 /*# sourceMappingURL=all.css.map */

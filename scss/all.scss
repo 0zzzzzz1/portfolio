@@ -10,7 +10,8 @@ $font:'Montserrat', 'Noto Sans JP', sans-serif;
 
 // 瀏覽器
 body{
-    width: 100vw; height: 100vh;
+    width: 100vw; 
+    // height: 100vh;
     margin: 0;
     padding: 0;
     display: flex;
@@ -39,6 +40,34 @@ body{
         font-size: 20px;
         letter-spacing: 2px;
         color: $color_w;
+    }
+}
+
+// 按鈕
+.btnUpDown{ 
+    display: flex;
+    top: 0; left: 0;
+    position: fixed;
+    z-index: 100;
+
+    .btn{ // 區塊
+        width: 7vw; height: 100px;
+        background-color: $color_r;
+        font-size: 24px;
+        font-family: $font;
+        font-weight: 300;
+        letter-spacing: 5%;
+        color: $color_w;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .arrow{ // 箭頭
+        margin-left: 20px;
+        width: 20px; height: 70px;
+        background: no-repeat center 100%/cover url('../img/arrow.svg');
     }
 }
 
@@ -122,6 +151,7 @@ body{
     .exBox{ // 經歷容器
         width: 60vw; 
         margin-top: 40px;
+        // margin-bottom: 40px;
         position: relative;
         top:70px; left: 33vw;
         display: grid;
@@ -208,38 +238,33 @@ body{
             }
         }
     }   
-}
 
-// 按鈕
-.btnUpDown{ 
-    display: flex;
-    margin-left: 90px;
-    position: fixed;
-    z-index: 100;
-
-    .btn{ // 區塊
-        width: 170px; height: 70px;
-        background-color: $color_g3;
-        font-size: 24px;
-        font-family: $font;
-        color: $color_g1;
+    // Footer
+    .footer{
+        margin-left: 90px;
+        width: 89.8%; 
+        height: 70px;
+        box-sizing: border-box;
+        position: relative;
+        border-left: solid .5px $color_g2;
+        border-right: solid .5px $color_g2;
+        border-top: solid .5px $color_g2;
         display: flex;
         align-items: center;
-        justify-content: center;
-        text-decoration: none;
-    }
-
-    .arrow{ // 箭頭
-        margin-left: 20px;
-        width: 20px; height: 70px;
-        background: no-repeat center 100%/cover url('../img/arrow.svg');
+        justify-content: space-between;
+        margin-top: 150px;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 14px;
+        color: $color_g1;
+        font-family: $font;
     }
 }
 
 // 作品
 .works{
-    margin-top: 1080px;
-    padding-top: 70px;
+    // height: 100vh;
+    padding-top: 100px;
     padding-left: 7vw; // 跑馬燈
     margin-bottom: 100px;
     width: 93vw; 
@@ -251,17 +276,13 @@ body{
     line-height: 29px;
     letter-spacing: 2%;
 
-    .arrow{ // 旋轉箭頭
-        transform: rotate(.5turn);
-    }
-
     // 作品容器
     .worksBox{ 
         width: 93vw; 
         overflow-x: hidden;
         position: absolute;
         padding-left: 90px;
-        top: 220px;
+        // top: 220px;
         display: flex;
         flex-wrap: wrap;
 
@@ -345,9 +366,12 @@ body{
             margin-top: 100px;
             padding-left: 30px;
             padding-right: 30px;
+            font-size: 14px;
+            color: $color_g1;
+            font-family: $font;
         }
     }
-
-    
 }
+
+
 
