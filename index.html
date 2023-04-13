@@ -19,7 +19,10 @@
     
     <!-- 跑馬燈 -->
     <div class="marquee">
-        <div>Hello, I'm Lin Zhiying, welcome to my website, I wish you a good day, I will continue to publish my works here, I hope you will like and follow my works.</div>
+        <div>
+            <p>Hello, welcome here and have a nice day.
+               I will publish my work here, I hope you will like it.</p>
+        </div>
     </div>
 
     <!-- 連接至作品集 -->
@@ -74,9 +77,9 @@
                 <div class="exBox3">
                     <!-- 獎項 -->
                     <div class="exYear">2019</div>
-                    <div class="exProject">Red Dot Winner</div>
+                    <div class="exProject"><a href="https://www.red-dot.org/project/zhaos-music-40836" target="_blank">Red Dot Winner</a></div>
                     <div class="exProject">Vision Get Wild Shortlisted</div>
-                    <div class="exContent">Zhao’s Music 音樂專輯設計</div>
+                    <div class="exContent">Zhao’s Music 音樂專輯設計<a href="" target="_blank"></a></div>
                 </div>
             </div>
         </div>
@@ -87,52 +90,6 @@
             <p>Taiwan</p>
         </div>
     </div>
-
-    
-
-    <!-- JS -->
-    <script>
-
-        window.onload=function(){
-            window.scrollTo(0,0);
-        }
-
-        // 視窗高度
-        let screenH = screen.height;
-
-        // 個人經歷
-        let basicY = document.getElementsByClassName('exBox')[0].offsetTop;  // 到文件頂部的距離
-        let boxH = document.getElementsByClassName('exBox')[0].offsetHeight; // 本身的高度
-
-        // 監聽
-        document.addEventListener('scroll',function(){
-
-            // 滾動值
-            let scrollY = window.scrollY;
-
-            // 滾動超過個人經歷時
-            if(scrollY+screenH >= basicY+boxH){
-                console.log('over');
-            }
-        })
-
-        // 畫面載入 about 按鈕隱藏
-        // document.getElementById('aboutBtn').style.display='none';
-
-        // 點擊 works 按鈕 to 作品區
-        // handleBtnToWorks=()=>{
-        //     document.getElementById('aboutBtn').style.display='flex';
-        //     document.getElementById('worksBtn').style.display='none';
-        // }
-
-        // 點擊 about 按鈕 to 基本資料
-        // handleBtnToAbout=()=>{
-        //     document.getElementById('worksBtn').style.display='flex';
-        //     document.getElementById('aboutBtn').style.display='none';
-        // }
-        
-    </script>
-   
     
 </body>
 </html>

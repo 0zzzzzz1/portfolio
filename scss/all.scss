@@ -7,6 +7,10 @@ $color_r:rgba(235, 87, 87, 1);
 
 // 字型
 $font:'Montserrat', 'Noto Sans JP', sans-serif;
+a{
+    text-decoration: none;
+    color: $color_g1;
+}
 
 // 瀏覽器
 body{
@@ -22,24 +26,36 @@ body{
 // 跑馬燈
 .marquee{
     width: 7vw; 
-    height: 100%;
-    background-color: $color_g1;
-    color: white;
+    height: 100vh;
+    color: $color_w;
     overflow: hidden;
     position: fixed;
     top: 0; left: 0;
-    z-index: 100;
+    z-index: 99;
+    background-color: $color_g1;
+
 
     div{ // 文字設定
-        // width: 100%;
-        // overflow: hidden;
-        transform: translate(0%, 100vh) rotate(-0.25turn); 
-        white-space: nowrap;
-        font-family: $font;
-        font-weight: 100;
-        font-size: 20px;
-        letter-spacing: 2px;
-        color: $color_w;
+        display: flex;
+        width: 100vh; height: 7vw;  
+        align-items: center;
+        transform: translate(-44%, 100vh) rotate(-0.25turn); 
+        
+        p{
+            white-space: nowrap;
+            font-family: $font;
+            font-weight: 100;
+            font-size: 22px;
+            letter-spacing: 4px;
+        }
+        p:nth-child(1){
+            animation: scroll 35s linear infinite;
+        }
+        
+        @keyframes scroll{
+            from{transform: translateX(100%)}
+            to{transform: translateX(-100%)}
+          }
     }
 }
 
@@ -263,7 +279,6 @@ body{
 
 // 作品
 .works{
-    // height: 100vh;
     padding-top: 100px;
     padding-left: 7vw; // 跑馬燈
     margin-bottom: 100px;
@@ -299,8 +314,10 @@ body{
         .workBoxS { 
             width: 43.5%; height: 520px;
 
-            .worksImg{ // 作品主圖
+            .worksImg img{ // 作品主圖
                 width: 100%; height: 430px;
+                object-fit: cover;
+                object-position: 0% 50%;
             }
             &:nth-child(2){ // 第二個作品距離設定
                 margin-left: 50px;

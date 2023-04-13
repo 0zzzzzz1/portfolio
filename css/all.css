@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+}
+
 body {
   width: 100vw;
   margin: 0;
@@ -9,23 +14,39 @@ body {
 
 .marquee {
   width: 7vw;
-  height: 100%;
-  background-color: rgb(51, 51, 51);
-  color: white;
+  height: 100vh;
+  color: rgb(255, 255, 255);
   overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 99;
+  background-color: rgb(51, 51, 51);
 }
 .marquee div {
-  transform: translate(0%, 100vh) rotate(-0.25turn);
+  display: flex;
+  width: 100vh;
+  height: 7vw;
+  align-items: center;
+  transform: translate(-44%, 100vh) rotate(-0.25turn);
+}
+.marquee div p {
   white-space: nowrap;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
   font-weight: 100;
-  font-size: 20px;
-  letter-spacing: 2px;
-  color: rgb(255, 255, 255);
+  font-size: 22px;
+  letter-spacing: 4px;
+}
+.marquee div p:nth-child(1) {
+  animation: scroll 35s linear infinite;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 .btnUpDown {
@@ -255,9 +276,11 @@ body {
   width: 43.5%;
   height: 520px;
 }
-.works .worksBox .workBoxS .worksImg {
+.works .worksBox .workBoxS .worksImg img {
   width: 100%;
   height: 430px;
+  object-fit: cover;
+  object-position: 0% 50%;
 }
 .works .worksBox .workBoxS:nth-child(2) {
   margin-left: 50px;
