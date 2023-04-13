@@ -328,6 +328,7 @@ body {
   display: block;
 }
 .works .worksBox .workBoxL .graphicBox .worksImg .worksHover {
+  display: none;
 }
 .works .worksBox .footer {
   width: 89.8%;
