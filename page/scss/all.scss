@@ -1,0 +1,353 @@
+// 色票
+$color_g1:rgba(51, 51, 51, 1);
+$color_g2:rgba(189, 189, 189, 1);
+$color_g3:rgba(242, 242, 242, 1);
+$color_w:rgba(255, 255, 255, 1);
+$color_r:rgba(235, 87, 87, 1);
+
+// 字型
+$font:'Montserrat', 'Noto Sans JP', sans-serif;
+
+// 瀏覽器
+body{
+    width: 100vw; height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow-x: hidden;
+    position: relative;
+}
+
+// 跑馬燈
+.marquee{
+    width: 7vw; 
+    height: 100%;
+    background-color: $color_g1;
+    color: white;
+    overflow: hidden;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 100;
+
+    div{ // 文字設定
+        // width: 100%;
+        // overflow: hidden;
+        transform: translate(0%, 100vh) rotate(-0.25turn); 
+        white-space: nowrap;
+        font-family: $font;
+        font-weight: 100;
+        font-size: 20px;
+        letter-spacing: 2px;
+        color: $color_w;
+    }
+}
+
+// 主要內容
+.main{
+    width: 93vw; 
+    padding-left: 7vw;
+    font-family: $font;
+    font-weight: 400;
+    position: relative;
+    
+    // 基本資料
+    .basic{
+        width: 33vw; height: 500px;
+        background-color: $color_g3;
+
+        div{ // 字形設定
+            margin: 0;
+            color: $color_g1;
+            padding-left: 90px;
+            width: 20vw;
+            position: absolute;
+            // ...
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+
+            &:nth-of-type(1){ // 性名
+                font-size: 28px;
+                line-height: 41px;
+                letter-spacing: 8%;
+                top: 100px;
+                font-weight: 200;
+            }
+
+            &:nth-of-type(2){ // name
+                font-size: 22px;
+                line-height: 32px;
+                letter-spacing: 3%;
+                top: 156px; 
+            }
+
+            &:nth-of-type(3){ // 縣市
+                font-size: 16px;
+                line-height: 23px;
+                letter-spacing: 3%;
+                top: 331px; 
+            }
+
+            &:nth-of-type(4){ // 職稱
+                font-size: 16px;
+                line-height: 23px;
+                letter-spacing: 3%;
+                top: 375px; 
+            }
+
+            &:nth-of-type(5){ // 照片
+                padding-left: 0px;
+                width: 60vw; height: 500px;
+                overflow: hidden;
+                background: no-repeat center 100%/cover url('../img/0zzzzzz1.jpg');
+                top: 0; right: 0;
+            }
+        }
+    }
+
+    // 經歷
+    .experience{
+        width: 60vw;
+        position: relative;
+        top:70px; left: 33vw;
+        overflow: hidden;
+    }
+
+    .extitle{ // 標題字形設定 Experience/Awards
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 5%;
+    }
+
+    .exBox{ // 經歷容器
+        width: 60vw; 
+        margin-top: 40px;
+        position: relative;
+        top:70px; left: 33vw;
+        display: grid;
+        grid-template-columns: 60% 40%;
+
+        .exBox1{ // 經歷x3
+            width: 100%;
+            border-left: solid .5px $color_g2;
+
+            div{ // 文字縮排
+                padding-left: 40px;
+                padding-right: 40px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+
+        .exBox2{ // 經歷x1 獎項x1
+            height: 87px;
+            width: 100%;
+            border-left: solid .5px $color_g2;
+
+            div{ // 縮排
+                padding-left: 40px;
+                padding-right: 40px;
+                // ...
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            .extitle{
+                margin-top: 85px;
+            }
+
+            // 獎項
+            .extitle{
+                padding-left: 0px;
+                margin-left: 0px; // 標題不縮排
+                width: 468-40-0.5px; height: auto;
+            }
+
+            .exBox3{
+                padding-left: 0px;
+                margin-left: 0px;
+                padding-right: 40px;
+                width: 100%; height: 131px;
+                border-left: solid .5px $color_g2;
+                margin-top: 40px;
+
+                .exProject:last-child{ // 獎項行距調整
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        div{ // 行高行距顏色設定
+            color: $color_g1;
+            position: relative;
+            
+            &.exYear{ // 年份
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: 20%;
+                margin-top: 40px;
+                color: $color_g2;
+
+                &:first-child{ // 第一個項目行距取消
+                    margin-top: 0px;
+                }
+            }
+
+            &.exProject{ // 專案名稱
+                font-size: 18px;
+                line-height: 21.6px;
+                margin-top: 17px;
+            }
+
+            &.exContent{ // 內容
+                font-size: 14px;
+                line-height: 25px;
+                color: $color_g2;
+                margin-top: 10px;
+            }
+        }
+    }   
+}
+
+// 按鈕
+.btnUpDown{ 
+    display: flex;
+    margin-left: 90px;
+    position: fixed;
+    z-index: 100;
+
+    .btn{ // 區塊
+        width: 170px; height: 70px;
+        background-color: $color_g3;
+        font-size: 24px;
+        font-family: $font;
+        color: $color_g1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .arrow{ // 箭頭
+        margin-left: 20px;
+        width: 20px; height: 70px;
+        background: no-repeat center 100%/cover url('../img/arrow.svg');
+    }
+}
+
+// 作品
+.works{
+    margin-top: 1080px;
+    padding-top: 70px;
+    padding-left: 7vw; // 跑馬燈
+    margin-bottom: 100px;
+    width: 93vw; 
+    position: absolute;
+    display: flex;
+    font-family: $font;
+    color: $color_g1;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 2%;
+
+    .arrow{ // 旋轉箭頭
+        transform: rotate(.5turn);
+    }
+
+    // 作品容器
+    .worksBox{ 
+        width: 93vw; 
+        overflow-x: hidden;
+        position: absolute;
+        padding-left: 90px;
+        top: 220px;
+        display: flex;
+        flex-wrap: wrap;
+
+        .worksContent{ // 總字形設定
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        // 網頁作品
+        .workBoxS { 
+            width: 43.5%; height: 520px;
+
+            .worksImg{ // 作品主圖
+                width: 100%; height: 430px;
+            }
+            &:nth-child(2){ // 第二個作品距離設定
+                margin-left: 50px;
+            }
+
+            .worksContent{ // 字形設定
+                margin-top: 10px;
+                border-bottom: solid 0.5px $color_g1;
+                border-right: solid 0.5px $color_g1;
+                border-left: solid 0.5px $color_g1;
+            }
+        }
+
+        // 平面作品
+        .workBoxL{ 
+            width: 89.8%; 
+            margin-top: 100px;
+            display: flex;
+            flex-flow: wrap;
+
+            .worksContent{ // 字形設定
+                width: 100%; 
+                margin-bottom: 10px;
+                border-top: solid 0.5px $color_g1;
+                border-right: solid 0.5px $color_g1;
+                border-left: solid 0.5px $color_g1;
+            }
+
+            .graphicBox{ // 瀑布式排版
+                width: 100%;
+                column-count: 3;
+                column-gap: 0px;
+                background-color: $color_g3;
+
+                .worksImg{ // 作品主圖
+                    box-sizing: content-box;
+                    break-inside: avoid;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: 50% 50%;
+                        display: block;
+                    }
+                }
+            }
+            
+        }
+
+        // Footer
+        .footer{
+            width: 89.8%; 
+            height: 70px;
+            box-sizing: border-box;
+            position: relative;
+            border-left: solid .5px $color_g2;
+            border-right: solid .5px $color_g2;
+            border-top: solid .5px $color_g2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 100px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+
+    
+}
+

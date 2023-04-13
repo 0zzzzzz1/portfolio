@@ -1,0 +1,301 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.marquee {
+  width: 7vw;
+  height: 100%;
+  background-color: rgb(51, 51, 51);
+  color: white;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.marquee div {
+  transform: translate(0%, 100vh) rotate(-0.25turn);
+  white-space: nowrap;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: rgb(255, 255, 255);
+}
+
+.main {
+  width: 93vw;
+  padding-left: 7vw;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  position: relative;
+}
+.main .basic {
+  width: 33vw;
+  height: 500px;
+  background-color: rgb(242, 242, 242);
+}
+.main .basic div {
+  margin: 0;
+  color: rgb(51, 51, 51);
+  padding-left: 90px;
+  width: 20vw;
+  position: absolute;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.main .basic div:nth-of-type(1) {
+  font-size: 28px;
+  line-height: 41px;
+  letter-spacing: 8%;
+  top: 100px;
+  font-weight: 200;
+}
+.main .basic div:nth-of-type(2) {
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 3%;
+  top: 156px;
+}
+.main .basic div:nth-of-type(3) {
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 3%;
+  top: 331px;
+}
+.main .basic div:nth-of-type(4) {
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 3%;
+  top: 375px;
+}
+.main .basic div:nth-of-type(5) {
+  padding-left: 0px;
+  width: 60vw;
+  height: 500px;
+  overflow: hidden;
+  background: no-repeat center 100%/cover url("../img/0zzzzzz1.jpg");
+  top: 0;
+  right: 0;
+}
+.main .experience {
+  width: 60vw;
+  position: relative;
+  top: 70px;
+  left: 33vw;
+  overflow: hidden;
+}
+.main .extitle {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 5%;
+}
+.main .exBox {
+  width: 60vw;
+  margin-top: 40px;
+  position: relative;
+  top: 70px;
+  left: 33vw;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+.main .exBox .exBox1 {
+  width: 100%;
+  border-left: solid 0.5px rgb(189, 189, 189);
+}
+.main .exBox .exBox1 div {
+  padding-left: 40px;
+  padding-right: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.main .exBox .exBox2 {
+  height: 87px;
+  width: 100%;
+  border-left: solid 0.5px rgb(189, 189, 189);
+}
+.main .exBox .exBox2 div {
+  padding-left: 40px;
+  padding-right: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.main .exBox .exBox2 .extitle {
+  margin-top: 85px;
+}
+.main .exBox .exBox2 .extitle {
+  padding-left: 0px;
+  margin-left: 0px;
+  width: 427.5px;
+  height: auto;
+}
+.main .exBox .exBox2 .exBox3 {
+  padding-left: 0px;
+  margin-left: 0px;
+  padding-right: 40px;
+  width: 100%;
+  height: 131px;
+  border-left: solid 0.5px rgb(189, 189, 189);
+  margin-top: 40px;
+}
+.main .exBox .exBox2 .exBox3 .exProject:last-child {
+  margin-top: 10px;
+}
+.main .exBox div {
+  color: rgb(51, 51, 51);
+  position: relative;
+}
+.main .exBox div.exYear {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 20%;
+  margin-top: 40px;
+  color: rgb(189, 189, 189);
+}
+.main .exBox div.exYear:first-child {
+  margin-top: 0px;
+}
+.main .exBox div.exProject {
+  font-size: 18px;
+  line-height: 21.6px;
+  margin-top: 17px;
+}
+.main .exBox div.exContent {
+  font-size: 14px;
+  line-height: 25px;
+  color: rgb(189, 189, 189);
+  margin-top: 10px;
+}
+
+.btnUpDown {
+  display: flex;
+  margin-left: 90px;
+  position: fixed;
+  z-index: 100;
+}
+.btnUpDown .btn {
+  width: 170px;
+  height: 70px;
+  background-color: rgb(242, 242, 242);
+  font-size: 24px;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  color: rgb(51, 51, 51);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.btnUpDown .arrow {
+  margin-left: 20px;
+  width: 20px;
+  height: 70px;
+  background: no-repeat center 100%/cover url("../img/arrow.svg");
+}
+
+.works {
+  margin-top: 1080px;
+  padding-top: 70px;
+  padding-left: 7vw;
+  margin-bottom: 100px;
+  width: 93vw;
+  position: absolute;
+  display: flex;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  color: rgb(51, 51, 51);
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 2%;
+}
+.works .arrow {
+  transform: rotate(0.5turn);
+}
+.works .worksBox {
+  width: 93vw;
+  overflow-x: hidden;
+  position: absolute;
+  padding-left: 90px;
+  top: 220px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.works .worksBox .worksContent {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.works .worksBox .workBoxS {
+  width: 43.5%;
+  height: 520px;
+}
+.works .worksBox .workBoxS .worksImg {
+  width: 100%;
+  height: 430px;
+}
+.works .worksBox .workBoxS:nth-child(2) {
+  margin-left: 50px;
+}
+.works .worksBox .workBoxS .worksContent {
+  margin-top: 10px;
+  border-bottom: solid 0.5px rgb(51, 51, 51);
+  border-right: solid 0.5px rgb(51, 51, 51);
+  border-left: solid 0.5px rgb(51, 51, 51);
+}
+.works .worksBox .workBoxL {
+  width: 89.8%;
+  margin-top: 100px;
+  display: flex;
+  flex-flow: wrap;
+}
+.works .worksBox .workBoxL .worksContent {
+  width: 100%;
+  margin-bottom: 10px;
+  border-top: solid 0.5px rgb(51, 51, 51);
+  border-right: solid 0.5px rgb(51, 51, 51);
+  border-left: solid 0.5px rgb(51, 51, 51);
+}
+.works .worksBox .workBoxL .graphicBox {
+  width: 100%;
+  column-count: 3;
+  column-gap: 0px;
+  background-color: rgb(242, 242, 242);
+}
+.works .worksBox .workBoxL .graphicBox .worksImg {
+  box-sizing: content-box;
+  break-inside: avoid;
+}
+.works .worksBox .workBoxL .graphicBox .worksImg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  display: block;
+}
+.works .worksBox .footer {
+  width: 89.8%;
+  height: 70px;
+  box-sizing: border-box;
+  position: relative;
+  border-left: solid 0.5px rgb(189, 189, 189);
+  border-right: solid 0.5px rgb(189, 189, 189);
+  border-top: solid 0.5px rgb(189, 189, 189);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/*# sourceMappingURL=all.css.map */

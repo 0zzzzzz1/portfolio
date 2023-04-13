@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Web Title -->
+    <title>Home</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/all.css" />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <script src="https://kit.fontawesome.com/eb952b4105.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <!-- 跑馬燈 -->
+    <div class="marquee">
+        <div>Hello, I'm Lin Zhiying, welcome to my website, I wish you a good day, I will continue to publish my works here, I hope you will like and follow my works.</div>
+    </div>
+
+    <!-- 主要內容 -->
+    <div class="main" id="about">
+
+        <!-- 基本資料 -->
+        <div class="basic">
+            <div>林芝潁</div>
+            <div>Zhi-Ying Lin</div>
+            <div>
+                <i class="fa-solid fa-location-dot" 
+                   style="color: #333333; 
+                          margin-right: 5px;"></i>
+                Taichung
+            </div>
+            <div>全端工程師 Full-Stack Engineer</div>
+            <div></div>
+        </div>
+
+        <!-- 經歷 -->
+        <div class="experience extitle">Experience</div>
+        <!-- 容器 -->
+        <div class="exBox">
+            <!-- 左 -->
+            <div class="exBox1">
+                <div class="exYear">2023</div>
+                <div class="exProject">iSpan</div>
+                <div class="exContent">全端工程師就業養成班 結訓 ● 前端網站 Ckids ● 全端網站 GOsport</div>
+    
+                <div class="exYear">2020</div>
+                <div class="exProject">Earthdope Ltd. Co.</div>
+                <div class="exContent">審計新村 SHENJI 368 ● 桃園神社 昭和拾參 Taoyuan Shrin<br/>綠美丘藝術市集 Midori Art Market ● 富地市場 Foodie Market</div>
+    
+                <div class="exYear">2019</div>
+                <div class="exProject">TWINKLELOVE LTD.</div>
+                <div class="exContent">Vian La Beauté ● HEA</div>
+            </div>
+            <!-- 右 -->
+            <div class="exBox2">
+                <div class="exYear">2019</div>
+                <div class="exProject">Asia University</div>
+                <div class="exContent">Visual Communication Design</div>
+
+                <div class="extitle">Awards</div>
+                <div class="exBox3">
+                    <!-- 獎項 -->
+                    <div class="exYear">2019</div>
+                    <div class="exProject">Red Dot Winner</div>
+                    <div class="exProject">Vision Get Wild Shortlisted</div>
+                    <div class="exContent">Zhao’s Music 音樂專輯設計</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 到works -->
+        <div class="btnUpDown" id="worksBtn">
+            <a class="btn" href='#works' onclick="handleBtnToWorks()">Works</a>
+            <div class="arrow"></div>
+        </div>
+
+    </div>
+
+    <!-- 作品 -->
+    <div class="works" id="works">
+
+        <!-- 回到about -->
+        <div class="btnUpDown" id="aboutBtn">
+            <a class="btn" href='#about'>About</a>
+            <div class="arrow"></div>
+        </div>
+
+        <!-- works Box -->
+        <div class="worksBox">
+
+            <!-- 全端作品 -->
+            <div class="workBoxS">
+                <div class="worksImg" style="background: no-repeat center 100%/cover url('./img/works/Web_GOsport.jpg');"></div>
+                <div class="worksContent">
+                    <p>GOsport ● Full-stack</p>
+                    <p>2023</p>
+                </div>
+            </div>
+            <!-- 前端作品 -->
+            <div class="workBoxS">
+                <div class="worksImg" style="background: no-repeat center 100%/cover url('./img/works/Web_Ckids.jpg');"></div>
+                <div class="worksContent">
+                    <p>Ckids ● Front-end</p>
+                    <p>2022</p>
+                </div>
+            </div>
+            <!-- 平面作品 -->
+            <div class="workBoxL">
+
+                <div class="worksContent">
+                    <p>Graphic Design</p>
+                    <p>2019-2022</p>
+                </div>
+
+                <div class="graphicBox">
+                    <div class="worksImg"><img src="./img/works/Album_ZhaosMusic.jpg"></div>
+                    <div class="worksImg"><img src="./img/works/graphic_富地市場地圖.jpg"></div>
+                    <div class="worksImg"><img src="./img/works/graphic_綠美丘黑金派對招商.jpg"></div>
+                    <div class="worksImg"><img src="./img/works/graphic_橋上說書.jpg"></div>
+                    <div class="worksImg"><img src="./img/works/graphic_2022母親節.jpg"></div>
+                    <div class="worksImg"><img src="./img/works/graphic_2022端午節.jpg"></div>
+                    <div class="worksImg"><img src="./img/works/graphic_暮暮市集攤位地圖.jpg"></div>
+                    <div class="worksImg"><img src="./img/works/LOGO_Yours.jpg"></div>
+
+                    <div class="worksImg"><img src="./img/works/product_神社繪馬.jpg"></div>
+                    <div class="worksImg"><img src="./img/works/graphic_綠美丘玩轉金典.jpg"></div>
+                    <div class="worksImg"><img src="./img/works/graphic_2022勞動節.jpg"></div>
+                    <div class="worksImg"><img src="./img/works/graphic_花水手慶典招商.jpg"></div>
+                    <div class="worksImg"><img src="./img/works/graphic_2021中秋2.jpg"></div>
+                    <div class="worksImg"><img src="./img/works/product_神社礦泉水.jpg"></div>
+                    <div class="worksImg"><img src="./img/works/graphic_葶芙卡片設計.jpg"></div>
+
+                    <div class="worksImg"><img src="./img/works/LOGO_47studio.jpg"></div>
+                    <div class="worksImg"><img src="./img/works/LOGO_July Nailart.jpg"></div>
+                    <div class="worksImg"><img src="./img/works/LOGO_富地魚市場.jpg"></div>
+                    <div class="worksImg"><img src="./img/works/LOGO_GinaBon.jpg"></div>
+                    <div class="worksImg"><img src="./img/works/LOGO_小蛋燒.jpg"></div>
+                    <div class="worksImg"><img src="./img/works/graphic_如夢似幻服務台.jpg"></div>
+                    <div class="worksImg"><img src="./img/works/graphic_2021中秋.jpg"></div>
+                    
+                </div>
+                
+            </div>
+            <!-- Footer -->
+            <div class="footer">
+                <p>Copyright © 2023 Zhi-Ying Lin. 保留一切權利。</p>
+                <p>Taiwan</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById('aboutBtn').style.display='none';
+
+        handleBtnToWorks=()=>{
+            console.log('ok');
+            // document.getElementById('aboutBtn').style.display='';
+        }
+        
+    </script>
+   
+    
+</body>
+</html>
