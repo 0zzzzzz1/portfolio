@@ -319,6 +319,7 @@ body{
                 object-fit: cover;
                 object-position: 0% 50%;
             }
+
             &:nth-child(2){ // 第二個作品距離設定
                 margin-left: 50px;
             }
@@ -362,10 +363,21 @@ body{
                         object-fit: cover;
                         object-position: 50% 50%;
                         display: block;
+
+                        &:hover{
+                            display: none;
+                        }
+
+                        &:hover+.worksHover{
+                            display: block;
+                        }
+                    }
+
+                    .worksHover{
+                        display: none;
                     }
                 }
             }
-            
         }
 
         // Footer
