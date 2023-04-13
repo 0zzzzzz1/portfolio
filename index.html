@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +14,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
     <!-- icon -->
     <script src="https://kit.fontawesome.com/eb952b4105.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    
+
+    <style>
+      .page {
+        display: none;
+      }
+      .aboutPage {
+        display: block;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- 切換頁面 -->
+    <div class="btn toworks" onclick="changePage('works')">Works</div>
+    <div class="btn toabout" onclick="changePage('about')">About</div>
+
     <!-- 跑馬燈 -->
     <div class="marquee">
         <div>
@@ -25,71 +38,230 @@
         </div>
     </div>
 
-    <!-- 連接至作品集 -->
-    <div class="btnUpDown" id="worksBtn">
-        <a class="btn" href='/works.html' onclick="handleBtnToWorks()">W</a>
-        <!-- <div class="arrow"></div> -->
+    <!-- 基本資料 -->
+    <div class="page aboutPage">
+        <div class="main" id="about">
+
+            <!-- 基本資料 -->
+            <div class="basic">
+                <div>林芝潁</div>
+                <div>Zhi-Ying Lin</div>
+                <div>
+                    <i class="fa-solid fa-location-dot" 
+                       style="color: #333333; 
+                              margin-right: 5px;"></i>
+                    Taichung
+                </div>
+                <div>全端工程師 Full-Stack Engineer</div>
+                <div></div>
+            </div>
+    
+            <!-- 經歷 -->
+            <div class="experience extitle">Experience</div>
+            
+            <!-- 容器 -->
+            <div class="exBox">
+                <!-- 左 -->
+                <div class="exBox1">
+                    <div class="exYear">2023</div>
+                    <div class="exProject">iSpan</div>
+                    <div class="exContent">全端工程師就業養成班 結訓 ● 前端網站 Ckids ● 全端網站 GOsport</div>
+        
+                    <div class="exYear">2020</div>
+                    <div class="exProject">Earthdope Ltd. Co.</div>
+                    <div class="exContent">審計新村 SHENJI 368 ● 桃園神社 昭和拾參 Taoyuan Shrin<br/>綠美丘藝術市集 Midori Art Market ● 富地市場 Foodie Market</div>
+        
+                    <div class="exYear">2019</div>
+                    <div class="exProject">TWINKLELOVE LTD.</div>
+                    <div class="exContent">Vian La Beauté ● HEA</div>
+                </div>
+                <!-- 右 -->
+                <div class="exBox2">
+                    <div class="exYear">2019</div>
+                    <div class="exProject">Asia University</div>
+                    <div class="exContent">Visual Communication Design</div>
+    
+                    <div class="extitle">Awards</div>
+                    <div class="exBox3">
+                        <!-- 獎項 -->
+                        <div class="exYear">2019</div>
+                        <div class="exProject"><a href="https://www.red-dot.org/project/zhaos-music-40836" target="_blank">Red Dot Winner</a></div>
+                        <div class="exProject">Vision Get Wild Shortlisted</div>
+                        <div class="exContent">Zhao’s Music 音樂專輯設計<a href="" target="_blank"></a></div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Footer -->
+            <div class="footer">
+                <p>Copyright © 2023 Zhi-Ying Lin. 保留一切權利。</p>
+                <p>Taiwan</p>
+            </div>
+        </div>
     </div>
 
-    <!-- 個人資料 -->
-    <div class="main" id="about">
+    <!-- 作品集 -->
+    <div class="page worksPage">
+        <div class="works" id="works">
 
-        <!-- 基本資料 -->
-        <div class="basic">
-            <div>林芝潁</div>
-            <div>Zhi-Ying Lin</div>
-            <div>
-                <i class="fa-solid fa-location-dot" 
-                   style="color: #333333; 
-                          margin-right: 5px;"></i>
-                Taichung
-            </div>
-            <div>全端工程師 Full-Stack Engineer</div>
-            <div></div>
-        </div>
-
-        <!-- 經歷 -->
-        <div class="experience extitle">Experience</div>
-        
-        <!-- 容器 -->
-        <div class="exBox">
-            <!-- 左 -->
-            <div class="exBox1">
-                <div class="exYear">2023</div>
-                <div class="exProject">iSpan</div>
-                <div class="exContent">全端工程師就業養成班 結訓 ● 前端網站 Ckids ● 全端網站 GOsport</div>
+            <!-- works Box -->
+            <div class="worksBox">
     
-                <div class="exYear">2020</div>
-                <div class="exProject">Earthdope Ltd. Co.</div>
-                <div class="exContent">審計新村 SHENJI 368 ● 桃園神社 昭和拾參 Taoyuan Shrin<br/>綠美丘藝術市集 Midori Art Market ● 富地市場 Foodie Market</div>
+                <!-- 全端作品 -->
+                <div class="workBoxS">
+                    <div class="worksImg">
+                        <a href='https://youtu.be/n65f0qvzV4I' target="_blank"><img src='/img/works/Web_GOsport.jpg' /></a>
+                    </div>
+                    <div class="worksContent">
+                        <p>GOsport ● Full-stack</p>
+                        <p>2023</p>
+                    </div>
+                </div>
+                <!-- 前端作品 -->
+                <div class="workBoxS">
+                    <div class="worksImg">
+                        <a href='https://youtu.be/dIH7_GDLVnU' target="_blank"><img src='/img/works/Web_Ckids.jpg' /></a>    
+                    </div>
+                    <div class="worksContent">
+                        <p>Ckids ● Front-end</p>
+                        <p>2022</p>
+                    </div>
+                </div>
+                <!-- 平面作品 -->
+                <div class="workBoxL">
     
-                <div class="exYear">2019</div>
-                <div class="exProject">TWINKLELOVE LTD.</div>
-                <div class="exContent">Vian La Beauté ● HEA</div>
-            </div>
-            <!-- 右 -->
-            <div class="exBox2">
-                <div class="exYear">2019</div>
-                <div class="exProject">Asia University</div>
-                <div class="exContent">Visual Communication Design</div>
-
-                <div class="extitle">Awards</div>
-                <div class="exBox3">
-                    <!-- 獎項 -->
-                    <div class="exYear">2019</div>
-                    <div class="exProject"><a href="https://www.red-dot.org/project/zhaos-music-40836" target="_blank">Red Dot Winner</a></div>
-                    <div class="exProject">Vision Get Wild Shortlisted</div>
-                    <div class="exContent">Zhao’s Music 音樂專輯設計<a href="" target="_blank"></a></div>
+                    <div class="worksContent">
+                        <p>Graphic Design</p>
+                        <p>2019-2022</p>
+                    </div>
+    
+                    <div class="graphicBox">
+                        <div class="worksImg">
+                            <img class='worksBanner' src="./img/works/Album_ZhaosMusic.jpg" />
+                            <img class='worksHover' src="./img/works/hover/1_Zhaosmusic.jpg" />
+                        </div>
+                        <div class="worksImg">
+                            <img src="./img/works/graphic_富地市場地圖.jpg">
+                            <img class='worksHover' src="./img/works/hover/2_富地市場地圖指引.jpg" />
+                        </div>
+                        <div class="worksImg">
+                            <img src="./img/works/graphic_綠美丘黑金派對招商.jpg">
+                            <img class='worksHover' src="./img/works/hover/3_黑金派對.jpg" />
+                        </div>
+                        <div class="worksImg">
+                            <img src="./img/works/graphic_橋上說書.jpg">
+                            <img class='worksHover' src="./img/works/hover/4_橋上說書.jpg" />
+                        </div>
+                        <div class="worksImg">
+                            <img src="./img/works/graphic_2022母親節.jpg">
+                            <img class='worksHover' src="./img/works/hover/5_2022母親節文宣.jpg" />
+                        </div>
+                        <div class="worksImg">
+                            <img src="./img/works/graphic_2022端午節.jpg">
+                            <img class='worksHover' src="./img/works/hover/6_2022端午節文宣.jpg" />
+                        </div>
+                        <div class="worksImg">
+                            <img src="./img/works/graphic_暮暮市集攤位地圖.jpg">
+                            <img class='worksHover' src="./img/works/hover/7_暮暮攤位地圖指引.jpg" />
+                        </div>
+                        <div class="worksImg">
+                            <img src="./img/works/LOGO_Yours.jpg">
+                            <img class='worksHover' src="./img/works/hover/8_Yours.jpg" />
+                        </div>
+    
+                        <div class="worksImg">
+                            <img src="./img/works/product_神社繪馬.jpg">
+                            <img class='worksHover' src="./img/works/hover/9_桃園神社繪馬.jpg" />
+                        </div>
+                        <div class="worksImg">
+                            <img src="./img/works/graphic_綠美丘玩轉金典.jpg">
+                            <img class='worksHover' src="./img/works/hover/10_玩轉金典聖誕.jpg" />
+                        </div>
+                        <div class="worksImg">
+                            <img src="./img/works/graphic_2022勞動節.jpg">
+                            <img class='worksHover' src="./img/works/hover/11_2022勞動節.jpg" />
+                        </div>
+                        <div class="worksImg">
+                            <img src="./img/works/graphic_花水手慶典招商.jpg">
+                            <img class='worksHover' src="./img/works/hover/12_元宇宙花手水.jpg" />
+                        </div>
+                        <div class="worksImg">
+                            <img src="./img/works/graphic_2021中秋2.jpg">
+                            <img class='worksHover' src="./img/works/hover/13_2021中秋節.jpg" />
+                        </div>
+                        <div class="worksImg">
+                            <img src="./img/works/product_神社礦泉水.jpg">
+                            <img class='worksHover' src="./img/works/hover/14_桃園神社礦泉水.jpg" />
+                        </div>
+                        <div class="worksImg">
+                            <img src="./img/works/graphic_葶芙卡片設計.jpg">
+                            <img class='worksHover' src="./img/works/hover/15_品牌邀卡.jpg" />
+                        </div>
+    
+                        <div class="worksImg">
+                            <img src="./img/works/LOGO_47studio.jpg">
+                            <img class='worksHover' src="./img/works/hover/16_47studio.jpg" />
+                        </div>
+                        <div class="worksImg">
+                            <img src="./img/works/LOGO_July Nailart.jpg">
+                            <img class='worksHover' src="./img/works/hover/17_julynailart.jpg" />
+                        </div>
+                        <div class="worksImg">
+                            <img src="./img/works/LOGO_富地魚市場.jpg">
+                            <img class='worksHover' src="./img/works/hover/18_魚市場.jpg" />
+                        </div>
+                        <div class="worksImg">
+                            <img src="./img/works/LOGO_GinaBon.jpg">
+                            <img class='worksHover' src="./img/works/hover/19_ginabon.jpg" />
+                        </div>
+                        <div class="worksImg">
+                            <img src="./img/works/LOGO_小蛋燒.jpg">
+                            <img class='worksHover' src="./img/works/hover/20_小蛋燒.jpg" />
+                        </div>
+                        <div class="worksImg">
+                            <img src="./img/works/graphic_如夢似幻服務台.jpg">
+                            <img class='worksHover' src="./img/works/hover/21_綠美丘.jpg" />
+                        </div>
+                        <div class="worksImg">
+                            <img src="./img/works/graphic_2021中秋.jpg">
+                            <img class='worksHover' src="./img/works/hover/22_2022中秋節2.jpg" />
+                        </div>
+                        
+                    </div>
+                </div>
+    
+                 <!-- Footer -->
+                <div class="footer">
+                    <p>Copyright © 2023 Zhi-Ying Lin. 保留一切權利。</p>
+                    <p>Taiwan</p>
                 </div>
             </div>
         </div>
-
-        <!-- Footer -->
-        <div class="footer">
-            <p>Copyright © 2023 Zhi-Ying Lin. 保留一切權利。</p>
-            <p>Taiwan</p>
-        </div>
     </div>
-    
-</body>
+  </body>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+    // 隱藏按鈕W
+    $('.toabout').hide();
+
+    function changePage(page) {
+        // 所有頁面隱藏
+        $('.page').hide();
+
+        if (page === 'works') { 
+            // 顯示作品集
+            $('.worksPage').show()
+            $('.toabout').show();
+            $('.toworks').hide();
+
+        } else if (page === 'about') {
+            // 顯示基本資料
+            $('.aboutPage').show()
+            $('.toabout').hidw();
+            $('.toworks').show();
+        } 
+        history.pushState(null, null, page)
+    }
+  
+  </script>
 </html>

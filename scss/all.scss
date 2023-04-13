@@ -60,31 +60,22 @@ body{
 }
 
 // 按鈕
-.btnUpDown{ 
+.btn{ // 區塊
     display: flex;
     top: 0; left: 0;
     position: fixed;
     z-index: 100;
-
-    .btn{ // 區塊
-        width: 7vw; height: 100px;
-        background-color: $color_r;
-        font-size: 24px;
-        font-family: $font;
-        font-weight: 300;
-        letter-spacing: 5%;
-        color: $color_w;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-    }
-
-    .arrow{ // 箭頭
-        margin-left: 20px;
-        width: 20px; height: 70px;
-        background: no-repeat center 100%/cover url('../img/arrow.svg');
-    }
+    width: 7vw; height: 100px;
+    background-color: $color_r;
+    font-size: 24px;
+    font-family: $font;
+    font-weight: 300;
+    letter-spacing: 5%;
+    color: $color_w;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 // 主要內容
@@ -356,25 +347,30 @@ body{
                 .worksImg{ // 作品主圖
                     box-sizing: content-box;
                     break-inside: avoid;
+                    position: relative;
 
-                    img {
-                        height: 100%;
+                    img{
                         width: 100%;
+                        height: 100%;
                         object-fit: cover;
                         object-position: 50% 50%;
                         display: block;
-
-                        &:hover{
-                            display: none;
-                        }
-
-                        &:hover+.worksHover{
-                            display: block;
-                        }
                     }
 
                     .worksHover{
+                        opacity: 0;
+                        position: absolute;
+                        top:0;
+                        width: 100%;
+                        z-index: 100;
+                    }
+
+                    .worksBanner:hover{
+                        opacity: 0;
                         display: none;
+                    }
+                    .worksBanner:hover+.worksHover{
+                        opacity: 1;
                     }
                 }
             }
@@ -401,6 +397,8 @@ body{
         }
     }
 }
+
+
 
 
 
