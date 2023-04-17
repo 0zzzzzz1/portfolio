@@ -122,9 +122,10 @@ body {
   width: 60vw;
   height: 500px;
   overflow: hidden;
-  background: no-repeat center 100%/cover url("../img/0zzzzzz1.jpg");
+  background: no-repeat center 100%/cover url("./img/0zzzzzz1.jpg");
   top: 0;
   right: 0;
+  z-index: 300;
 }
 .main .experience {
   width: 60vw;

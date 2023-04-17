@@ -60,7 +60,7 @@ body{
 }
 
 // 按鈕
-.btn{ // 區塊
+.btn{
     display: flex;
     top: 0; left: 0;
     position: fixed;
@@ -136,8 +136,9 @@ body{
                 padding-left: 0px;
                 width: 60vw; height: 500px;
                 overflow: hidden;
-                background: no-repeat center 100%/cover url('../img/0zzzzzz1.jpg');
+                background: no-repeat center 100%/cover url('./img/0zzzzzz1.jpg');
                 top: 0; right: 0;
+                z-index: 300;
             }
         }
     }
