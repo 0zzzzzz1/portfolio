@@ -5,8 +5,8 @@ a {
 
 body {
   width: 100vw;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   display: flex;
   overflow-x: hidden;
   position: relative;
@@ -15,37 +15,36 @@ body {
 .marquee {
   width: 7vw;
   height: 100vh;
-  color: rgb(255, 255, 255);
+  color: rgb(235, 87, 87);
   overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 99;
   background-color: rgb(51, 51, 51);
-}
-.marquee div {
   display: flex;
-  width: 100vh;
-  height: 7vw;
-  align-items: center;
-  transform: translate(-44%, 100vh) rotate(-0.25turn);
+  justify-content: center;
+  padding-top: 100px;
 }
-.marquee div p {
+.marquee p {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
   white-space: nowrap;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
-  font-weight: 100;
-  font-size: 22px;
-  letter-spacing: 4px;
+  font-weight: 200;
+  font-size: 20px;
+  letter-spacing: 2px;
+  position: absolute;
 }
-.marquee div p:nth-child(1) {
-  animation: scroll 35s linear infinite;
+.marquee p:nth-of-type(1) {
+  animation: scroll 20s linear infinite;
 }
 @keyframes scroll {
   from {
-    transform: translateX(100%);
+    transform: translateY(100%);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateY(-100%);
   }
 }
 
@@ -56,13 +55,14 @@ body {
   position: fixed;
   z-index: 100;
   width: 7vw;
-  height: 100px;
+  height: 7vw;
+  border-radius: 50%;
   background-color: rgb(235, 87, 87);
-  font-size: 24px;
+  font-size: 20px;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 5%;
-  color: rgb(255, 255, 255);
+  color: rgb(51, 51, 51);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -250,7 +250,7 @@ body {
   display: flex;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
   color: rgb(51, 51, 51);
-  font-size: 24px;
+  font-size: 18px;
   line-height: 29px;
   letter-spacing: 2%;
 }
@@ -258,8 +258,8 @@ body {
   width: 93vw;
   overflow-x: hidden;
   position: absolute;
-  padding-left: 90px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .works .worksBox .worksContent {
@@ -270,18 +270,21 @@ body {
   padding-left: 30px;
   padding-right: 30px;
 }
+.works .worksBox .worksContent p:nth-of-type(1) {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 .works .worksBox .workBoxS {
   width: 43.5%;
-  height: 520px;
 }
 .works .worksBox .workBoxS .worksImg img {
   width: 100%;
-  height: 430px;
   object-fit: cover;
   object-position: 0% 50%;
 }
 .works .worksBox .workBoxS:nth-child(2) {
-  margin-left: 50px;
+  margin-left: 2.8%;
 }
 .works .worksBox .workBoxS .worksContent {
   margin-top: 10px;

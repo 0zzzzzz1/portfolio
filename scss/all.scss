@@ -15,9 +15,8 @@ a{
 // 瀏覽器
 body{
     width: 100vw; 
-    // height: 100vh;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     display: flex;
     overflow-x: hidden;
     position: relative;
@@ -27,35 +26,34 @@ body{
 .marquee{
     width: 7vw; 
     height: 100vh;
-    color: $color_w;
+    color: $color_r;
     overflow: hidden;
     position: fixed;
     top: 0; left: 0;
     z-index: 99;
     background-color: $color_g1;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
 
+    p{
+        writing-mode: vertical-lr; // 直排
+        text-orientation: mixed;   // 轉向
+        white-space: nowrap;
+        font-family: $font;
+        font-weight: 200;
+        font-size: 20px;
+        letter-spacing: 2px;
+        position: absolute;
+    }
 
-    div{ // 文字設定
-        display: flex;
-        width: 100vh; height: 7vw;  
-        align-items: center;
-        transform: translate(-44%, 100vh) rotate(-0.25turn); 
-        
-        p{
-            white-space: nowrap;
-            font-family: $font;
-            font-weight: 100;
-            font-size: 22px;
-            letter-spacing: 4px;
-        }
-        p:nth-child(1){
-            animation: scroll 35s linear infinite;
-        }
+    p:nth-of-type(1){
+        animation: scroll 20s linear infinite;
         
         @keyframes scroll{
-            from{transform: translateX(100%)}
-            to{transform: translateX(-100%)}
-          }
+            from{transform: translateY(100%)}
+            to{transform: translateY(-100%)}
+        }
     }
 }
 
@@ -65,13 +63,15 @@ body{
     top: 0; left: 0;
     position: fixed;
     z-index: 100;
-    width: 7vw; height: 100px;
+    width: 7vw; 
+    height: 7vw;
+    border-radius: 50%;
     background-color: $color_r;
-    font-size: 24px;
+    font-size: 20px;
     font-family: $font;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 5%;
-    color: $color_w;
+    color: $color_g1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -282,9 +282,10 @@ body{
     width: 93vw; 
     position: absolute;
     display: flex;
+    // 字形設定
     font-family: $font;
     color: $color_g1;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 29px;
     letter-spacing: 2%;
 
@@ -293,35 +294,40 @@ body{
         width: 93vw; 
         overflow-x: hidden;
         position: absolute;
-        padding-left: 90px;
-        // top: 220px;
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
 
-        .worksContent{ // 總字形設定
+        .worksContent{ // 作品說明
             height: 70px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding-left: 30px;
             padding-right: 30px;
+            
+            p:nth-of-type(1){
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
         }
 
         // 網頁作品
         .workBoxS { 
-            width: 43.5%; height: 520px;
+            width: 43.5%; 
 
             .worksImg img{ // 作品主圖
-                width: 100%; height: 430px;
+                width: 100%; 
                 object-fit: cover;
                 object-position: 0% 50%;
             }
 
             &:nth-child(2){ // 第二個作品距離設定
-                margin-left: 50px;
+                margin-left: 2.8%;
             }
 
-            .worksContent{ // 字形設定
+            .worksContent{ // 作品說明
                 margin-top: 10px;
                 border-bottom: solid 0.5px $color_g1;
                 border-right: solid 0.5px $color_g1;
@@ -364,20 +370,11 @@ body{
                     }
 
                     .worksHover{
-                        // opacity: 0;
                         position: absolute;
                         top:0;
                         width: 100%;
                         z-index: 100;
                     }
-
-                    // .worksBanner:hover{
-                    //     // opacity: 0;
-                    //     display: none;
-                    // }
-                    // .worksBanner:hover+.worksHover{
-                    //     opacity: 1;
-                    // }
                 }
             }
         }

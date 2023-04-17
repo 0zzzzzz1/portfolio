@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/all.css" />
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
     <!-- icon -->
     <script src="https://kit.fontawesome.com/eb952b4105.js" crossorigin="anonymous"></script>
 
@@ -27,15 +27,12 @@
   </head>
   <body>
     <!-- 切換頁面 -->
-    <div class="btn toworks" onclick="changePage('works')">Works</div>
-    <div class="btn toabout" onclick="changePage('about')">About</div>
+    <div class="btn toworks" onclick="changePage('works')">W</div>
+    <div class="btn toabout" onclick="changePage('about')">A</div>
 
     <!-- 跑馬燈 -->
     <div class="marquee">
-        <div>
-            <p>Hello, welcome here and have a nice day.
-               I will publish my work here, I hope you will like it.</p>
-        </div>
+        <p>Welcome &#124;&#8226;&apos;-&apos;&#8226;&#41;&nbsp;&#10023; I'll be sharing my works here, hope you enjoy it!</p>
     </div>
 
     <!-- 基本資料 -->
@@ -232,13 +229,15 @@
     
                  <!-- Footer -->
                 <div class="footer">
-                    <p>Copyright © 2023 Zhi-Ying Lin. 保留一切權利。</p>
+                    <p>Copyright © 2023 0zzzzzz1.</p>
                     <p>Taiwan</p>
                 </div>
             </div>
         </div>
     </div>
   </body>
+
+  <!-- iQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <script>
@@ -251,7 +250,12 @@
         }
     });
 
-    // 隱藏按鈕W
+    // 在重新載入頁面時更改 URL
+    window.addEventListener('beforeunload', function() {
+        location.replace("https://0zzzzzz1.github.io/0z1.workshop/");
+    });
+
+    // 隱藏 Works 按鈕
     $('.toabout').hide();
 
     // 切換頁面
@@ -272,7 +276,7 @@
             $('.toabout').hide();
             $('.toworks').show();
         } 
-        
+
         history.pushState(null, null, page)
     }
 
