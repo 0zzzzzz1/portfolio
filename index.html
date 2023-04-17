@@ -53,7 +53,7 @@
                     Taichung
                 </div>
                 <div>全端工程師 Full-Stack Engineer</div>
-                <div></div>
+                <div><img src="./img/0zzzzzz1.jpg"></div>
             </div>
     
             <!-- 經歷 -->
@@ -239,12 +239,24 @@
         </div>
     </div>
   </body>
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <script>
+
+    // 在頁面加載後從 sessionStorage 中讀取滾動位置
+    $(document).ready(function() {
+        var scrollPosition = sessionStorage.getItem('scrollPosition');
+        if (scrollPosition !== null) {
+            $(window).scrollTop(scrollPosition);
+        }
+    });
+
     // 隱藏按鈕W
     $('.toabout').hide();
 
+    // 切換頁面
     function changePage(page) {
+    
         // 所有頁面隱藏
         $('.page').hide();
 
@@ -260,8 +272,26 @@
             $('.toabout').hide();
             $('.toworks').show();
         } 
-        // history.pushState(null, null, page)
+        
+        history.pushState(null, null, page)
     }
+
+    // 隱藏作品說明圖
+    $('.worksHover').hide();
+
+    $(document).ready(function() { // after DOM ready 
+
+        // 控制作品 hover
+        $('.worksImg')
+            .mouseenter(function(){
+                $('.worksHover',this).show();
+            })
+            .mouseleave(function(){
+                $('.worksHover',this).hide();
+            })
+
+    });
+    
   
   </script>
 </html>
