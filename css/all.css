@@ -301,8 +301,8 @@ body {
   }
   .main .basic div:nth-of-type(3) {
     width: auto;
-    font-size: 8px;
-    line-height: 11px;
+    font-size: 12px;
+    line-height: 17.7px;
     letter-spacing: 3%;
     top: 490px;
     right: 40px;
@@ -311,8 +311,8 @@ body {
   .main .basic div:nth-of-type(4) {
     width: 50%;
     height: auto;
-    font-size: 10px;
-    line-height: 14px;
+    font-size: 12px;
+    line-height: 17.7px;
     letter-spacing: 3%;
     top: 487px;
     white-space: nowrap;
@@ -338,6 +338,11 @@ body {
   top: 70px;
   left: 35%;
 }
+@media (max-width: 767px) {
+  .main .experience {
+    left: 40px;
+  }
+}
 @media (min-width: 1024px) {
   .main .extitle {
     font-size: 20px;
@@ -354,22 +359,41 @@ body {
 }
 @media (max-width: 767px) {
   .main .extitle {
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 13px;
+    line-height: 15.6px;
     letter-spacing: 5%;
   }
 }
 .main .exBox {
-  width: 65%;
-  margin-top: 40px;
-  position: relative;
-  top: 70px;
-  left: 35%;
+  margin-bottom: 130px;
 }
 @media (min-width: 1280px) {
   .main .exBox {
     display: grid;
     grid-template-columns: 60% 40%;
+    width: 65%;
+    margin-top: 40px;
+    position: relative;
+    top: 70px;
+    left: 35%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .main .exBox {
+    width: 65%;
+    margin-top: 40px;
+    position: relative;
+    top: 70px;
+    left: 35%;
+  }
+}
+@media (max-width: 767px) {
+  .main .exBox {
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+    top: 70px;
+    left: 40px;
   }
 }
 .main .exBox .exBox1 {
@@ -412,7 +436,6 @@ body {
   margin-left: 0px;
   padding-right: 40px;
   width: 100%;
-  height: 131px;
   border-left: solid 0.5px rgb(189, 189, 189);
   margin-top: 40px;
 }
@@ -438,15 +461,15 @@ body {
 @media (min-width: 768px) and (max-width: 1023px) {
   .main .exBox div.exYear {
     font-size: 12px;
-    line-height: 14px;
+    line-height: 14.4px;
     letter-spacing: 5%;
   }
 }
 @media (max-width: 767px) {
   .main .exBox div.exYear {
     right: 0;
-    font-size: 8px;
-    line-height: 9.6px;
+    font-size: 12px;
+    line-height: 14.4px;
     letter-spacing: 5%;
   }
 }
@@ -470,8 +493,8 @@ body {
 }
 @media (max-width: 767px) {
   .main .exBox div.exProject {
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 12px;
+    line-height: 14.4px;
   }
 }
 .main .exBox div.exContent {
@@ -492,28 +515,9 @@ body {
 }
 @media (max-width: 767px) {
   .main .exBox div.exContent {
-    font-size: 8px;
-    line-height: 16px;
+    font-size: 10px;
+    line-height: 20px;
   }
-}
-.main .footer {
-  margin-left: 90px;
-  width: 89.8%;
-  height: 70px;
-  box-sizing: border-box;
-  position: relative;
-  border-left: solid 0.5px rgb(189, 189, 189);
-  border-right: solid 0.5px rgb(189, 189, 189);
-  border-top: solid 0.5px rgb(189, 189, 189);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 150px;
-  padding-left: 30px;
-  padding-right: 30px;
-  font-size: 14px;
-  color: rgb(189, 189, 189);
-  font-family: "Montserrat", "Noto Sans JP", sans-serif;
 }
 
 .works {
