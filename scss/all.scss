@@ -13,6 +13,10 @@ a{
 }
 
 // 瀏覽器
+html{
+    width: 100%;
+    overflow: hidden;
+}
 body{
     width: 100vw; 
     margin: 0px;
@@ -367,7 +371,6 @@ body{
         @media (min-width: 1280px){
             display: grid;
             grid-template-columns: 60% 40%;
-
             width: 65%; 
             margin-top: 40px;
             position: relative;
