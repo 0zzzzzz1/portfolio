@@ -20,56 +20,90 @@ body{
     display: flex;
     overflow-x: hidden;
     position: relative;
+    font-family: $font;
 }
 
 // 跑馬燈
 .marquee{
-    width: 7vw; 
-    height: 100vh;
-    color: $color_r;
+    color: $color_w;
     overflow: hidden;
     position: fixed;
     top: 0; left: 0;
-    z-index: 99;
+    z-index: 500;
     background-color: $color_g1;
     display: flex;
     justify-content: center;
-    padding-top: 100px;
+    align-items: center;
+
+    @media (min-width: 1024px){
+        width: 100px; 
+        height: 100vh;
+        padding-top: 100px;
+    }
+    
+    @media (min-width: 768px) and (max-width: 1023px){
+        width: 80px; 
+        height: 100vh;
+        padding-top: 100px;
+    }
+    
+    @media (max-width: 767px){
+        width: 100vw; 
+        height: 50px;
+        padding-left: 100px;
+    }
 
     p{
-        writing-mode: vertical-lr; // 直排
-        text-orientation: mixed;   // 轉向
         white-space: nowrap;
         font-family: $font;
         font-weight: 200;
-        font-size: 20px;
         letter-spacing: 2px;
         position: absolute;
-    }
-
-    p:nth-of-type(1){
         animation: scroll 20s linear infinite;
+
+        @media(min-width: 1024px){
+            font-size: 20px;
+            writing-mode: vertical-lr; // 直排
+            text-orientation: mixed;   // 轉向
         
-        @keyframes scroll{
+            @keyframes scroll{
             from{transform: translateY(100%)}
             to{transform: translateY(-100%)}
+        }
+        }
+        
+        @media (min-width: 768px) and (max-width: 1023px){
+            font-size: 16px;
+            writing-mode: vertical-lr; // 直排
+            text-orientation: mixed;   // 轉向
+        
+            @keyframes scroll{
+            from{transform: translateY(100%)}
+            to{transform: translateY(-100%)}
+        }
+        }
+        
+        @media(max-width: 767px){
+            font-size: 10px;
+            
+            @keyframes scroll{
+            from{transform: translateX(100%)}
+            to{transform: translateX(-100%)}
+        }
         }
     }
 }
 
-// 按鈕
+// 切換頁面 button
 .btn{
     display: flex;
     top: 0; left: 0;
     position: fixed;
-    z-index: 100;
-    width: 7vw; 
-    height: 7vw;
+    z-index: 600;
     border-radius: 50%;
     background-color: $color_r;
-    font-size: 20px;
     font-family: $font;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: 5%;
     color: $color_g1;
     display: flex;
@@ -77,98 +111,264 @@ body{
     justify-content: center;
     text-decoration: none;
     cursor: pointer;
+
+    @media (min-width: 1024px){
+        width: 100px; height: 100px;
+        font-size: 20px;
+    }
+    
+    @media (min-width: 768px) and (max-width: 1023px){
+        width: 80px; height: 80px;
+        font-size: 16px;
+    }
+    
+    @media (max-width: 767px){
+        width: 50px; height: 50px;
+        font-size: 10px;
+    }
+
+
 }
 
 // 主要內容
 .main{
-    width: 93vw; 
-    padding-left: 7vw;
     font-family: $font;
     font-weight: 400;
     position: relative;
+
+    @media (min-width: 1024px){
+        width: calc( 100vw - 100px );
+        padding-left: 100px;
+    }
+    
+    @media (min-width: 768px) and (max-width: 1023px){
+        width: calc( 100vw - 80px );
+        padding-left: 80px;
+    }
+    
+    @media (max-width: 767px){
+        width: 100vw;
+    }
     
     // 基本資料
-    .basic{
-        width: 33vw; height: 500px;
+    .basic{ 
         background-color: $color_g3;
+        
+        @media (min-width: 768px){
+            width: 35%;
+            height: 500px;
+            i{ width: 11px; }
+        }
+        
+        @media (max-width: 767px){
+            padding-top: 370px;
+            width: 100%;
+            height: 162px;
+            i{ width: 7px; }
+        }
 
         div{ // 字形設定
             margin: 0;
             color: $color_g1;
-            padding-left: 90px;
-            width: 20vw;
+            width: 25%;
             position: absolute;
+            font-family: $font;
             // ...
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
 
-            &:nth-of-type(1){ // 性名
-                font-size: 28px;
-                line-height: 41px;
-                letter-spacing: 8%;
-                top: 100px;
-                font-weight: 200;
-            }
+            @media (min-width: 1024px){
+                padding-left: 90px;
 
-            &:nth-of-type(2){ // name
-                font-size: 22px;
-                line-height: 32px;
-                letter-spacing: 3%;
-                top: 156px; 
-            }
-
-            &:nth-of-type(3){ // 縣市
-                font-size: 16px;
-                line-height: 23px;
-                letter-spacing: 3%;
-                top: 331px; 
-            }
-
-            &:nth-of-type(4){ // 職稱
-                font-size: 16px;
-                line-height: 23px;
-                letter-spacing: 3%;
-                top: 375px; 
-            }
-
-            &:nth-of-type(5){ // 照片
-                padding-left: 0px;
-                width: 60vw; height: 500px;
-                overflow: hidden;
-                top: 0; right: 0;
-                z-index: 300;
-
-                img{
-                    width: 100%; height: 100%;
-                    object-fit: cover;
+                &:nth-of-type(1){ // 性名
+                    font-size: 28px;
+                    line-height: 41px;
+                    letter-spacing: 8%;
+                    top: 100px;
+                    font-weight: 200;
+                }
+    
+                &:nth-of-type(2){ // name
+                    font-size: 22px;
+                    line-height: 32px;
+                    letter-spacing: 3%;
+                    top: 156px; 
+                }
+    
+                &:nth-of-type(3){ // 縣市
+                    font-size: 16px;
+                    line-height: 23px;
+                    letter-spacing: 3%;
+                    top: 331px; 
+                }
+    
+                &:nth-of-type(4){ // 職稱
+                    font-size: 16px;
+                    line-height: 23px;
+                    letter-spacing: 3%;
+                    top: 375px; 
+                    white-space: pre-line;
+                }
+    
+                &:nth-of-type(5){ // 照片
+                    padding-left: 0px;
+                    width: 65%;
+                    height: 500px;
+                    overflow: hidden;
+                    top: 0; right: 0;
+                    z-index: -1;
+    
+                    img{
+                        width: 100%; height: 100%;
+                        object-fit: cover;
+                    }
                 }
             }
+            
+            @media (min-width: 768px) and (max-width: 1023px){
+                padding-left: 60px;
+
+                &:nth-of-type(1){ // 性名
+                    font-size: 26px;
+                    line-height: 38px;
+                    letter-spacing: 8%;
+                    top: 100px;
+                    font-weight: 200;
+                }
+    
+                &:nth-of-type(2){ // name
+                    font-size: 18px;
+                    line-height: 26px;
+                    letter-spacing: 0%;
+                    top: 146px; 
+                }
+    
+                &:nth-of-type(3){ // 縣市
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 3%;
+                    top: 336px; 
+                }
+    
+                &:nth-of-type(4){ // 職稱
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 3%;
+                    top: 377px; 
+                    white-space: pre-line;
+                    overflow-wrap:break-word;
+                }
+    
+                &:nth-of-type(5){ // 照片
+                    padding-left: 0px;
+                    width: 65%; 
+                    height: 500px;
+                    overflow: hidden;
+                    top: 0; right: 0;
+                    z-index: -1;
+    
+                    img{
+                        width: 100%; height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            
+            @media (max-width: 767px){
+                padding-left: 40px;
+
+                &:nth-of-type(1){ // 性名
+                    font-size: 16px;
+                    line-height: 23px;
+                    letter-spacing: 8%;
+                    top: 400px;
+                    font-weight: 200;
+                }
+    
+                &:nth-of-type(2){ // name
+                    font-size: 12px;
+                    line-height: 17px;
+                    top: 429px; 
+                }
+    
+                &:nth-of-type(3){ // 縣市
+                    width: auto;
+                    font-size: 8px;
+                    line-height: 11px;
+                    letter-spacing: 3%;
+                    top: 490px; right: 40px;
+                    overflow: visible;
+                }
+    
+                &:nth-of-type(4){ // 職稱
+                    width: 50%;
+                    height: auto;
+                    font-size: 10px;
+                    line-height: 14px;
+                    letter-spacing: 3%;
+                    top: 487px; 
+                    white-space: nowrap;
+                    overflow-wrap:break-word;
+                }
+    
+                &:nth-of-type(5){ // 照片
+                    padding-left: 0px;
+                    width: 100vw; height: 320px;
+                    overflow: hidden;
+                    top: 50px; right: 0;
+                    z-index: 300;
+    
+                    img{
+                        width: 100%; height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+
         }
     }
 
     // 經歷
     .experience{
-        width: 60vw;
         position: relative;
-        top:70px; left: 33vw;
-        overflow: hidden;
+        top:70px; 
+        left: 35%;
     }
 
     .extitle{ // 標題字形設定 Experience/Awards
-        font-size: 20px;
-        line-height: 24px;
-        letter-spacing: 5%;
+
+        @media (min-width: 1024px){
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 5%;
+        }
+        
+        @media (min-width: 768px) and (max-width: 1023px){
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 5%;
+        }
+        
+        @media (max-width: 767px){
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 5%;
+        }
     }
 
     .exBox{ // 經歷容器
-        width: 60vw; 
+        width: 65%; 
         margin-top: 40px;
-        // margin-bottom: 40px;
         position: relative;
-        top:70px; left: 33vw;
-        display: grid;
-        grid-template-columns: 60% 40%;
+        top:70px; 
+        left: 35%;
+
+        @media (min-width: 1280px){
+            display: grid;
+            grid-template-columns: 60% 40%;
+        }
 
         .exBox1{ // 經歷x3
             width: 100%;
@@ -184,34 +384,38 @@ body{
         }
 
         .exBox2{ // 經歷x1 獎項x1
-            height: 87px;
             width: 100%;
-            border-left: solid .5px $color_g2;
+            padding-right: 40px;
+            // ...
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
 
-            div{ // 縮排
+            .exLine{
+                border-left: solid .5px $color_g2;
                 padding-left: 40px;
-                padding-right: 40px;
-                // ...
-                text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;
+
+                @media (max-width: 1279px){
+                    padding-top: 40px;
+                }
             }
             .extitle{
-                margin-top: 85px;
+                margin-top: 60px;
             }
 
             // 獎項
             .extitle{
                 padding-left: 0px;
                 margin-left: 0px; // 標題不縮排
-                width: 468-40-0.5px; height: auto;
+                height: auto;
             }
 
             .exBox3{
-                padding-left: 0px;
+                padding-left: 40px;
                 margin-left: 0px;
                 padding-right: 40px;
-                width: 100%; height: 131px;
+                width: 100%; 
+                height: 131px;
                 border-left: solid .5px $color_g2;
                 margin-top: 40px;
 
@@ -226,11 +430,28 @@ body{
             position: relative;
             
             &.exYear{ // 年份
-                font-size: 14px;
-                line-height: 17px;
-                letter-spacing: 20%;
                 margin-top: 40px;
                 color: $color_g2;
+                font-weight: 200;
+
+                @media (min-width: 1024px){
+                    font-size: 14px;
+                    line-height: 17px;
+                    letter-spacing: 5%;
+                }
+                
+                @media (min-width: 768px) and (max-width: 1023px){
+                    font-size: 12px;
+                    line-height: 14px;
+                    letter-spacing: 5%;
+                }
+                
+                @media (max-width: 767px){
+                    right: 0;
+                    font-size: 8px;
+                    line-height: 9.6px;
+                    letter-spacing: 5%;
+                }
 
                 &:first-child{ // 第一個項目行距取消
                     margin-top: 0px;
@@ -238,16 +459,42 @@ body{
             }
 
             &.exProject{ // 專案名稱
-                font-size: 18px;
-                line-height: 21.6px;
                 margin-top: 17px;
+
+                @media (min-width: 1024px){
+                    font-size: 18px;
+                    line-height: 21.6px;
+                }
+                
+                @media (min-width: 768px) and (max-width: 1023px){
+                    font-size: 14px;
+                    line-height: 16.8px;
+                }
+                
+                @media (max-width: 767px){
+                    font-size: 10px;
+                    line-height: 12px;
+                }
             }
 
             &.exContent{ // 內容
-                font-size: 14px;
-                line-height: 25px;
                 color: $color_g2;
                 margin-top: 10px;
+
+                @media (min-width: 1024px){
+                    font-size: 14px;
+                    line-height: 25px;
+                }
+                
+                @media (min-width: 768px) and (max-width: 1023px){
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+                
+                @media (max-width: 767px){
+                    font-size: 8px;
+                    line-height: 16px;
+                }
             }
         }
     }   
@@ -269,7 +516,7 @@ body{
         padding-left: 30px;
         padding-right: 30px;
         font-size: 14px;
-        color: $color_g1;
+        color: $color_g2;
         font-family: $font;
     }
 }
