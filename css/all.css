@@ -503,33 +503,71 @@ body {
 }
 
 .works {
-  padding-top: 100px;
-  padding-left: 100px;
+  margin-top: 80px;
+  margin-left: 100px;
   margin-bottom: 100px;
-  width: 93%;
-  height: 100%;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
   color: rgb(51, 51, 51);
-  font-size: 18px;
-  line-height: 29px;
-  letter-spacing: 2%;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .works {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .works {
+    margin-left: 0px;
+    margin-top: 100px;
+  }
+}
+@media (min-width: 1024px) {
+  .works {
+    font-size: 20px;
+    line-height: 21px;
+    letter-spacing: 0.5px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .works {
+    font-size: 16px;
+    line-height: 17px;
+    letter-spacing: 0.2px;
+  }
+}
+@media (max-width: 767px) {
+  .works {
+    font-size: 12px;
+    line-height: 14.4px;
+    letter-spacing: 0.1px;
+  }
 }
 .works .worksBox {
-  width: 93%;
   overflow-x: hidden;
-  position: absolute;
-  z-index: 500;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 .works .worksBox .worksContent {
-  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-left: 30px;
   padding-right: 30px;
+}
+@media (min-width: 1024px) {
+  .works .worksBox .worksContent {
+    height: 70px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .works .worksBox .worksContent {
+    height: 55px;
+  }
+}
+@media (max-width: 767px) {
+  .works .worksBox .worksContent {
+    height: 40px;
+  }
 }
 .works .worksBox .worksContent p:nth-of-type(1) {
   text-overflow: ellipsis;
@@ -555,9 +593,19 @@ body {
 }
 .works .worksBox .workBoxL {
   width: 89.8%;
-  margin-top: 100px;
+  margin-top: 70px;
   display: flex;
   flex-flow: wrap;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .works .worksBox .workBoxL {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .works .worksBox .workBoxL {
+    margin-top: 50px;
+  }
 }
 .works .worksBox .workBoxL .worksContent {
   width: 100%;
