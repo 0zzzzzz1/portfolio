@@ -18,7 +18,7 @@ html{
     overflow-x: hidden;
 }
 body{
-    width: 100%; 
+    width: 100vw; 
     margin: 0px;
     padding: 0px;
     display: flex;
@@ -30,7 +30,7 @@ body{
 // 跑馬燈
 .marquee{
     color: $color_w;
-    overflow-x: hidden;
+    overflow: hidden;
     position: fixed;
     top: 0; left: 0;
     z-index: 500;
@@ -39,14 +39,8 @@ body{
     justify-content: center;
     align-items: center;
 
-    @media (min-width: 1024px){
+    @media (min-width: 768px){
         width: 100px; 
-        height: 100vh;
-        padding-top: 100px;
-    }
-    
-    @media (min-width: 768px) and (max-width: 1023px){
-        width: 80px; 
         height: 100vh;
         padding-top: 100px;
     }
@@ -61,23 +55,12 @@ body{
         white-space: nowrap;
         font-family: $font;
         font-weight: 200;
-        letter-spacing: 2px;
         position: absolute;
-        animation: scroll 20s linear infinite;
+        animation: scroll 30s linear infinite;
 
-        @media(min-width: 1024px){
+        @media(min-width: 768px){
             font-size: 20px;
-            writing-mode: vertical-lr; // 直排
-            text-orientation: mixed;   // 轉向
-        
-            @keyframes scroll{
-            from{transform: translateY(100%)}
-            to{transform: translateY(-100%)}
-        }
-        }
-        
-        @media (min-width: 768px) and (max-width: 1023px){
-            font-size: 16px;
+            letter-spacing: 2px;
             writing-mode: vertical-lr; // 直排
             text-orientation: mixed;   // 轉向
         
@@ -89,7 +72,7 @@ body{
         
         @media(max-width: 767px){
             font-size: 10px;
-            
+            letter-spacing: 0.5px;
             @keyframes scroll{
             from{transform: translateX(100%)}
             to{transform: translateX(-100%)}
@@ -116,15 +99,15 @@ body{
     text-decoration: none;
     cursor: pointer;
 
-    @media (min-width: 1024px){
+    @media (min-width: 768px){
         width: 100px; height: 100px;
         font-size: 20px;
     }
     
-    @media (min-width: 768px) and (max-width: 1023px){
-        width: 80px; height: 80px;
-        font-size: 16px;
-    }
+    // @media (min-width: 768px) and (max-width: 1023px){
+    //     width: 80px; height: 80px;
+    //     font-size: 16px;
+    // }
     
     @media (max-width: 767px){
         width: 50px; height: 50px;
@@ -144,10 +127,10 @@ body{
         width: calc( 100vw - 100px );
         padding-left: 100px;
     }
-    
+
     @media (min-width: 768px) and (max-width: 1023px){
-        width: calc( 100vw - 80px );
-        padding-left: 80px;
+        width: calc( 100vw - 70px );
+        padding-left: 70px;
     }
     
     @media (max-width: 767px){
@@ -163,18 +146,17 @@ body{
             height: 500px;
             i{ width: 11px; }
         }
-        
         @media (max-width: 767px){
             padding-top: 370px;
             width: 100%;
-            height: 162px;
+            height: 170px;
             i{ width: 7px; }
         }
 
         div{ // 字形設定
             margin: 0;
             color: $color_g1;
-            width: 25%;
+            width: 20%;
             position: absolute;
             font-family: $font;
             // ...
@@ -190,14 +172,64 @@ body{
                     line-height: 41px;
                     letter-spacing: 8%;
                     top: 100px;
-                    font-weight: 200;
+                    font-weight: 100;
                 }
     
                 &:nth-of-type(2){ // name
-                    font-size: 22px;
+                    font-size: 19px;
                     line-height: 32px;
                     letter-spacing: 3%;
-                    top: 156px; 
+                    top: 154px; 
+                    font-weight: 500;
+                }
+    
+                &:nth-of-type(3){ // 縣市
+                    font-size: 16px;
+                    line-height: 23px;
+                    letter-spacing: 3%;
+                    top: 351px; 
+                }
+    
+                &:nth-of-type(4){ // 職稱
+                    font-size: 16px;
+                    line-height: 23px;
+                    letter-spacing: 3%;
+                    top: 395px; 
+                    white-space: pre-line;
+                }
+    
+                &:nth-of-type(5){ // 照片
+                    padding-left: 0px;
+                    width: 65%;
+                    height: 500px;
+                    overflow: hidden;
+                    top: 0; right: 0;
+                    z-index: -1;
+    
+                    img{
+                        width: 100%; height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            @media (min-width: 768px) and (max-width: 1023px){
+                padding-left: 90px;
+
+                &:nth-of-type(1){ // 性名
+                    font-size: 28px;
+                    line-height: 41px;
+                    letter-spacing: 8%;
+                    top: 100px;
+                    font-weight: 100;
+                }
+    
+                &:nth-of-type(2){ // name
+                    font-size: 19px;
+                    line-height: 32px;
+                    letter-spacing: 3%;
+                    top: 154px; 
+                    font-weight: 500;
                 }
     
                 &:nth-of-type(3){ // 縣市
@@ -230,78 +262,32 @@ body{
                 }
             }
             
-            @media (min-width: 768px) and (max-width: 1023px){
-                padding-left: 60px;
-
-                &:nth-of-type(1){ // 性名
-                    font-size: 26px;
-                    line-height: 38px;
-                    letter-spacing: 8%;
-                    top: 100px;
-                    font-weight: 200;
-                }
-    
-                &:nth-of-type(2){ // name
-                    font-size: 18px;
-                    line-height: 26px;
-                    letter-spacing: 0%;
-                    top: 146px; 
-                }
-    
-                &:nth-of-type(3){ // 縣市
-                    font-size: 14px;
-                    line-height: 20px;
-                    letter-spacing: 3%;
-                    top: 336px; 
-                }
-    
-                &:nth-of-type(4){ // 職稱
-                    font-size: 14px;
-                    line-height: 20px;
-                    letter-spacing: 3%;
-                    top: 377px; 
-                    white-space: pre-line;
-                    overflow-wrap:break-word;
-                }
-    
-                &:nth-of-type(5){ // 照片
-                    padding-left: 0px;
-                    width: 65%; 
-                    height: 500px;
-                    overflow: hidden;
-                    top: 0; right: 0;
-                    z-index: -1;
-    
-                    img{
-                        width: 100%; height: 100%;
-                        object-fit: cover;
-                    }
-                }
-            }
-            
             @media (max-width: 767px){
                 padding-left: 40px;
 
                 &:nth-of-type(1){ // 性名
-                    font-size: 16px;
-                    line-height: 23px;
-                    letter-spacing: 8%;
+                    font-size: 18px;
+                    line-height: 26.64px;
+                    letter-spacing: 1.2px;
                     top: 400px;
-                    font-weight: 200;
+                    font-weight: 400;
                 }
     
                 &:nth-of-type(2){ // name
                     font-size: 12px;
-                    line-height: 17px;
-                    top: 429px; 
+                    line-height: 17.76px;
+                    letter-spacing: 0.5px;
+                    top: 406px;
+                    left: 67px; 
+                    font-weight: 500;
                 }
     
                 &:nth-of-type(3){ // 縣市
                     width: auto;
                     font-size: 12px;
                     line-height: 17.7px;
-                    letter-spacing: 3%;
-                    top: 490px; right: 40px;
+                    letter-spacing: 0.2px;
+                    top: 464px; 
                     overflow: visible;
                 }
     
@@ -310,8 +296,8 @@ body{
                     height: auto;
                     font-size: 12px;
                     line-height: 17.7px;
-                    letter-spacing: 3%;
-                    top: 487px; 
+                    letter-spacing: 0.5px;
+                    top: 492px; 
                     white-space: nowrap;
                     overflow-wrap:break-word;
                 }
@@ -341,34 +327,31 @@ body{
         left: 35%;
 
         @media (max-width: 767px){
+            top:50px; 
             left: 40px;
         }
     }
 
     .extitle{ // 標題字形設定 Experience/Awards
+        font-weight: 500;
 
-        @media (min-width: 1024px){
+        @media (min-width: 768px){
             font-size: 20px;
             line-height: 24px;
-            letter-spacing: 5%;
-        }
-        
-        @media (min-width: 768px) and (max-width: 1023px){
-            font-size: 16px;
-            line-height: 19px;
-            letter-spacing: 5%;
+            letter-spacing: 0.7px;
         }
         
         @media (max-width: 767px){
             font-size: 13px;
             line-height: 15.6px;
-            letter-spacing: 5%;
+            letter-spacing: 0.5px;
         }
     }
 
     .exBox{ // 經歷容器
         margin-bottom: 130px;
-        @media (min-width: 1280px){
+
+        @media (min-width: 1440px){
             display: grid;
             grid-template-columns: 60% 40%;
             width: 65%; 
@@ -377,7 +360,7 @@ body{
             top:70px; 
             left: 35%;
         }
-        @media (min-width: 768px) and (max-width: 1279px){
+        @media (min-width: 768px) and (max-width: 1439px){
             width: 65%; 
             margin-top: 40px;
             position: relative;
@@ -386,10 +369,10 @@ body{
         }
 
         @media (max-width: 767px){
-            width: 100%; 
+            width: calc(100% - 80px); 
             margin-top: 40px;
             position: relative;
-            top:70px; 
+            top:50px; 
             left: 40px;
             }
 
@@ -397,9 +380,21 @@ body{
             width: 100%;
             border-left: solid .5px $color_g2;
 
-            div{ // 文字縮排
-                padding-left: 40px;
-                padding-right: 40px;
+            // 文字縮排
+            @media (min-width: 768px){
+                div{ 
+                    padding-left: 40px;
+                    padding-right: 40px;
+                }
+            }
+            @media (max-width: 767px){
+                div.exProject ,div.exContent{
+                    padding-left: 40px;
+                    padding-right: 40px;
+                }
+            }
+
+            div{
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;
@@ -418,16 +413,23 @@ body{
                 border-left: solid .5px $color_g2;
                 padding-left: 40px;
 
-                @media (max-width: 1279px){
+                @media (min-width: 768px){
+                    padding-top: 40px;
+                }
+                @media (max-width: 767px){
                     padding-top: 40px;
                 }
             }
-            .extitle{
-                margin-top: 60px;
+
+            .exProject{ // 調整
+                @media (max-width: 767px){
+                    margin-top: 0px;
+                }
             }
 
             // 獎項
             .extitle{
+                margin-top: 60px;
                 padding-left: 0px;
                 margin-left: 0px; // 標題不縮排
                 height: auto;
@@ -437,12 +439,16 @@ body{
                 padding-left: 40px;
                 margin-left: 0px;
                 padding-right: 40px;
-                width: 100%; 
-                // height: 131px;
+                width: calc(100% - 80px); 
                 border-left: solid .5px $color_g2;
                 margin-top: 40px;
+                position: relative;
 
                 .exProject:last-child{ // 獎項行距調整
+                    margin-top: 10px;
+                }
+
+                .exProject{
                     margin-top: 10px;
                 }
             }
@@ -454,26 +460,21 @@ body{
             
             &.exYear{ // 年份
                 margin-top: 40px;
-                color: $color_g2;
+                color: $color_g1;
                 font-weight: 200;
 
-                @media (min-width: 1024px){
+                @media (min-width: 768px){
                     font-size: 14px;
                     line-height: 17px;
-                    letter-spacing: 5%;
-                }
-                
-                @media (min-width: 768px) and (max-width: 1023px){
-                    font-size: 12px;
-                    line-height: 14.4px;
-                    letter-spacing: 5%;
+                    letter-spacing: 0.7px;
                 }
                 
                 @media (max-width: 767px){
+                    position: absolute;
                     right: 0;
                     font-size: 12px;
                     line-height: 14.4px;
-                    letter-spacing: 5%;
+                    letter-spacing: 0.5px;
                 }
 
                 &:first-child{ // 第一個項目行距取消
@@ -482,41 +483,38 @@ body{
             }
 
             &.exProject{ // 專案名稱
-                margin-top: 17px;
 
-                @media (min-width: 1024px){
+                @media (min-width: 768px){
                     font-size: 18px;
                     line-height: 21.6px;
-                }
-                
-                @media (min-width: 768px) and (max-width: 1023px){
-                    font-size: 14px;
-                    line-height: 16.8px;
+                    margin-top: 15px;
                 }
                 
                 @media (max-width: 767px){
-                    font-size: 12px;
-                    line-height: 14.4px;
+                    font-size: 14px;
+                    line-height: 15.6px;
+                    margin-top: 40px;
                 }
             }
 
             &.exContent{ // 內容
                 color: $color_g2;
                 margin-top: 10px;
+                width: 70%;
+                overflow:visible;
+                white-space:break-spaces;
+                font-weight: 400;
 
-                @media (min-width: 1024px){
+                @media (min-width: 768px){
                     font-size: 14px;
                     line-height: 25px;
-                }
-                
-                @media (min-width: 768px) and (max-width: 1023px){
-                    font-size: 12px;
-                    line-height: 18px;
+                    letter-spacing: 0.5px;
                 }
                 
                 @media (max-width: 767px){
-                    font-size: 10px;
+                    font-size: 12px;
                     line-height: 20px;
+                    letter-spacing: 0.2px;
                 }
             }
         }
@@ -572,11 +570,15 @@ body{
 // 作品
 .works{
     padding-top: 100px;
-    padding-left: 7vw; // 跑馬燈
+    padding-left: 100px; // 跑馬燈
     margin-bottom: 100px;
-    width: 93vw; 
+    width: 93%; 
+    // height: 800px;
     position: absolute;
-    display: flex;
+    z-index: 700;
+    // display: flex;
+    background-color: aquamarine;
+
     // 字形設定
     font-family: $font;
     color: $color_g1;
@@ -586,9 +588,10 @@ body{
 
     // 作品容器
     .worksBox{ 
-        width: 93vw; 
+        width: 93%; 
         overflow-x: hidden;
         position: absolute;
+        z-index: 500;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -672,26 +675,6 @@ body{
                     }
                 }
             }
-        }
-
-        // Footer
-        .footer{
-            width: 89.8%; 
-            height: 70px;
-            box-sizing: border-box;
-            position: relative;
-            border-left: solid .5px $color_g2;
-            border-right: solid .5px $color_g2;
-            border-top: solid .5px $color_g2;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 100px;
-            padding-left: 30px;
-            padding-right: 30px;
-            font-size: 14px;
-            color: $color_g1;
-            font-family: $font;
         }
     }
 }

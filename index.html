@@ -11,18 +11,20 @@
     <link rel="stylesheet" href="./css/all.css" />
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- icon -->
     <script src="https://kit.fontawesome.com/eb952b4105.js" crossorigin="anonymous"></script>
 
     <style>
-      .page {
-        display: none;
-      }
-      .aboutPage {
-        display: block;
-      }
-
+        .page{
+            display: none;
+        }
+        .aboutPage{
+            display: block;
+        }
+        /* .worksPage{
+            display: block;
+        } */
     </style>
   </head>
   <body>
@@ -32,7 +34,7 @@
 
     <!-- 跑馬燈 -->
     <div class="marquee">
-        <p>Welcome &#124;&#8226;&apos;-&apos;&#8226;&#41;&nbsp;&#10023; I'll be sharing my works here, hope you enjoy it!</p>
+        <p>Welcome and wish you have a nice day. &#124;&#8226;&apos;-&apos;&#8226;&#41;&nbsp;&#10023; I'll be sharing my works here, hope you enjoy it!</p>
     </div>
 
     <!-- 基本資料 -->
@@ -54,7 +56,7 @@
             </div>
     
             <!-- 經歷 -->
-            <div class="experience extitle">Experience</div>
+            <div class="experience extitle">EXPERIENCE</div>
             
             <!-- 容器 -->
             <div class="exBox">
@@ -66,7 +68,7 @@
         
                     <div class="exYear">2020</div>
                     <div class="exProject">Earthdope Ltd. Co.</div>
-                    <div class="exContent">審計新村 SHENJI 368 ● 桃園神社 昭和拾參 Taoyuan Shrin<br/>綠美丘藝術市集 Midori Art Market ● 富地市場 Foodie Market</div>
+                    <div class="exContent">審計新村 SHENJI 368 ● 桃園神社 昭和拾參 Taoyuan Shrin ● 綠美丘藝術市集 Midori Art Market ● 富地市場 Foodie Market</div>
         
                     <div class="exYear">2019</div>
                     <div class="exProject">TWINKLELOVE LTD.</div>
@@ -81,7 +83,7 @@
                     </div>
                     
     
-                    <div class="extitle">Awards</div>
+                    <div class="extitle">AWARDS</div>
                     <div class="exBox3">
                         <!-- 獎項 -->
                         <div class="exYear">2019</div>
@@ -91,9 +93,6 @@
                     </div>
                 </div>
             </div>
-    
-            <!-- Footer -->
-
         </div>
     </div>
 
@@ -226,12 +225,6 @@
                         
                     </div>
                 </div>
-    
-                 <!-- Footer -->
-                <div class="footer">
-                    <p>Copyright © 2023 0zzzzzz1.</p>
-                    <p>Taiwan</p>
-                </div>
             </div>
         </div>
     </div>
@@ -266,19 +259,19 @@
 
         if (page === 'works') { 
             // 顯示作品集
-            $('.worksPage').show()
+            $('.worksPage').show();
             $('.toworks').hide();
             $('.toabout').show();
 
         } else if (page === 'about') {
             // 顯示基本資料
-            $('.aboutPage').show()
+            $('.aboutPage').show();
             $('.toabout').hide();
             $('.toworks').show();
         } 
 
-        history.pushState(null, null, page)
-    }
+        history.pushState(null, null, page);
+    };
 
     // 隱藏作品說明圖
     $('.worksHover').hide();
