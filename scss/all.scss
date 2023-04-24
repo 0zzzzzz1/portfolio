@@ -13,12 +13,9 @@ a{
 }
 
 // 瀏覽器
-html{
-    width: 100%;
-    overflow-x: hidden;
-}
 body{
-    width: 100vw; 
+    width: 100%; 
+    height: 100%;
     margin: 0px;
     padding: 0px;
     display: flex;
@@ -573,11 +570,7 @@ body{
     padding-left: 100px; // 跑馬燈
     margin-bottom: 100px;
     width: 93%; 
-    // height: 800px;
-    position: absolute;
-    z-index: 700;
-    // display: flex;
-    background-color: aquamarine;
+    height: 100%;
 
     // 字形設定
     font-family: $font;

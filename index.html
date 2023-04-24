@@ -16,13 +16,10 @@
     <script src="https://kit.fontawesome.com/eb952b4105.js" crossorigin="anonymous"></script>
 
     <style>
-        .page{
+        /* .page{
             display: none;
         }
         .aboutPage{
-            display: block;
-        }
-        /* .worksPage{
             display: block;
         } */
     </style>
@@ -251,20 +248,25 @@
     // 隱藏 Works 按鈕
     $('.toabout').hide();
 
+    // 作品頁面隱藏
+    $('.worksPage').hide();
+
     // 切換頁面
     function changePage(page) {
     
         // 所有頁面隱藏
-        $('.page').hide();
+        // $('.page').hide();
 
         if (page === 'works') { 
             // 顯示作品集
+            $('.aboutPage').hide();
             $('.worksPage').show();
             $('.toworks').hide();
             $('.toabout').show();
 
         } else if (page === 'about') {
             // 顯示基本資料
+            $('.worksPage').hide();
             $('.aboutPage').show();
             $('.toabout').hide();
             $('.toworks').show();
