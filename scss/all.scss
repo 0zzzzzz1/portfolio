@@ -126,8 +126,8 @@ body{
     }
 
     @media (min-width: 768px) and (max-width: 1023px){
-        width: calc( 100vw - 70px );
-        padding-left: 70px;
+        width: calc( 100vw - 100px );
+        padding-left: 100px;
     }
     
     @media (max-width: 767px){
@@ -322,7 +322,9 @@ body{
         position: relative;
         top:70px; 
         left: 35%;
-
+        @media (min-width: 768px) and (max-width: 1023px){
+            left: 90px;
+        }
         @media (max-width: 767px){
             top:50px; 
             left: 40px;
@@ -348,7 +350,7 @@ body{
     .exBox{ // 經歷容器
         margin-bottom: 130px;
 
-        @media (min-width: 1440px){
+        @media (min-width: 1440px) {
             display: grid;
             grid-template-columns: 60% 40%;
             width: 65%; 
@@ -357,12 +359,19 @@ body{
             top:70px; 
             left: 35%;
         }
-        @media (min-width: 768px) and (max-width: 1439px){
+        @media (min-width: 1024px) and (max-width: 1439px){
             width: 65%; 
             margin-top: 40px;
             position: relative;
             top:70px; 
             left: 35%;
+        }
+        @media (min-width: 768px) and (max-width: 1023px){
+            width: calc(100% - 190px); 
+            margin-top: 40px;
+            position: relative;
+            top:70px; 
+            left: 90px;
         }
 
         @media (max-width: 767px){
@@ -409,7 +418,7 @@ body{
             .exLine{
                 border-left: solid .5px $color_g2;
                 padding-left: 40px;
-                @media (max-width: 1439px){
+                @media (max-width: 1023px){
                     padding-top: 40px;
                 }
             }
@@ -567,10 +576,12 @@ body{
     margin-bottom: 100px;
     @media (min-width: 768px) and (max-width: 1023px){
         margin-top: 60px;
+        margin-bottom: 60px;
     }
     @media (max-width: 767px){
         margin-left: 0px; // 跑馬燈移至上方
         margin-top: 100px;// ＋跑馬燈長度
+        margin-bottom: 50px;
     }
 
     // 字形設定
