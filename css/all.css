@@ -65,7 +65,7 @@ body {
 }
 @media (max-width: 767px) {
   .marquee p {
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 0.5px;
   }
   @keyframes scroll {
@@ -107,7 +107,7 @@ body {
   .btn {
     width: 70px;
     height: 70px;
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
