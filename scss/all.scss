@@ -43,7 +43,7 @@ body{
     }
     
     @media (max-width: 767px){
-        width: 100%; 
+        width: calc(100% - 100px); 
         height: 50px;
         padding-left: 100px;
     }
@@ -119,6 +119,7 @@ body{
     font-family: $font;
     font-weight: 400;
     position: relative;
+    overflow-x: hidden;
 
     @media (min-width: 1024px){
         width: calc( 100vw - 100px );
