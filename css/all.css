@@ -401,12 +401,7 @@ body {
   border-left: solid 0.5px rgb(189, 189, 189);
   padding-left: 40px;
 }
-@media (min-width: 768px) {
-  .main .exBox .exBox2 .exLine {
-    padding-top: 40px;
-  }
-}
-@media (max-width: 767px) {
+@media (max-width: 1439px) {
   .main .exBox .exBox2 .exLine {
     padding-top: 40px;
   }
@@ -574,16 +569,30 @@ body {
   overflow: hidden;
   white-space: nowrap;
 }
-.works .worksBox .workBoxS {
-  width: 43.5%;
+@media (min-width: 768px) {
+  .works .worksBox .workBoxS {
+    width: 43.5%;
+  }
+}
+@media (max-width: 767px) {
+  .works .worksBox .workBoxS {
+    width: 89.8%;
+  }
 }
 .works .worksBox .workBoxS .worksImg img {
   width: 100%;
   object-fit: cover;
   object-position: 0% 50%;
 }
-.works .worksBox .workBoxS:nth-child(2) {
-  margin-left: 2.8%;
+@media (min-width: 768px) {
+  .works .worksBox .workBoxS:nth-child(2) {
+    margin-left: 2.8%;
+  }
+}
+@media (max-width: 767px) {
+  .works .worksBox .workBoxS:nth-child(2) {
+    margin-top: 30px;
+  }
 }
 .works .worksBox .workBoxS .worksContent {
   margin-top: 10px;
@@ -616,9 +625,23 @@ body {
 }
 .works .worksBox .workBoxL .graphicBox {
   width: 100%;
-  column-count: 3;
   column-gap: 0px;
   background-color: rgb(242, 242, 242);
+}
+@media (min-width: 1024px) {
+  .works .worksBox .workBoxL .graphicBox {
+    column-count: 3;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .works .worksBox .workBoxL .graphicBox {
+    column-count: 2;
+  }
+}
+@media (max-width: 767px) {
+  .works .worksBox .workBoxL .graphicBox {
+    column-count: 1;
+  }
 }
 .works .worksBox .workBoxL .graphicBox .worksImg {
   box-sizing: content-box;

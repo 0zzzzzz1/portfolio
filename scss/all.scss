@@ -409,11 +409,7 @@ body{
             .exLine{
                 border-left: solid .5px $color_g2;
                 padding-left: 40px;
-
-                @media (min-width: 768px){
-                    padding-top: 40px;
-                }
-                @media (max-width: 767px){
+                @media (max-width: 1439px){
                     padding-top: 40px;
                 }
             }
@@ -567,14 +563,14 @@ body{
 // 作品
 .works{
     margin-top: 80px;
-    margin-left: 100px;
+    margin-left: 100px; // 跑馬燈寬度
     margin-bottom: 100px;
     @media (min-width: 768px) and (max-width: 1023px){
         margin-top: 60px;
     }
     @media (max-width: 767px){
-        margin-left: 0px;
-        margin-top: 100px;
+        margin-left: 0px; // 跑馬燈移至上方
+        margin-top: 100px;// ＋跑馬燈長度
     }
 
     // 字形設定
@@ -629,7 +625,12 @@ body{
 
         // 網頁作品
         .workBoxS { 
-            width: 43.5%; 
+            @media (min-width: 768px){
+                width: 43.5%; 
+            }
+            @media (max-width: 767px){
+                width: 89.8%; 
+            }
 
             .worksImg img{ // 作品主圖
                 width: 100%; 
@@ -638,7 +639,12 @@ body{
             }
 
             &:nth-child(2){ // 第二個作品距離設定
-                margin-left: 2.8%;
+                @media (min-width: 768px){
+                    margin-left: 2.8%;
+                }
+                @media (max-width: 767px){
+                    margin-top: 30px;
+                }
             }
 
             .worksContent{ // 作品說明
@@ -673,9 +679,19 @@ body{
 
             .graphicBox{ // 瀑布式排版
                 width: 100%;
-                column-count: 3;
                 column-gap: 0px;
                 background-color: $color_g3;
+                @media (min-width: 1024px){
+                    column-count: 3;
+                }
+                
+                @media (min-width: 768px) and (max-width: 1023px){
+                    column-count: 2;
+                }
+                
+                @media (max-width: 767px){
+                    column-count: 1;
+                }
 
                 .worksImg{ // 作品主圖
                     box-sizing: content-box;
