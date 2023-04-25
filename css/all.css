@@ -397,7 +397,7 @@ body {
 }
 @media (max-width: 767px) {
   .main .exBox .exBox1 div.exProject, .main .exBox .exBox1 div.exContent {
-    padding-left: 40px;
+    padding-left: 30px;
     padding-right: 40px;
   }
 }
@@ -415,7 +415,7 @@ body {
 }
 .main .exBox .exBox2 .exLine {
   border-left: solid 0.5px rgb(189, 189, 189);
-  padding-left: 40px;
+  padding-left: 30px;
 }
 @media (max-width: 1023px) {
   .main .exBox .exBox2 .exLine {
@@ -434,7 +434,7 @@ body {
   height: auto;
 }
 .main .exBox .exBox2 .exBox3 {
-  padding-left: 40px;
+  padding-left: 30px;
   margin-left: 0px;
   padding-right: 40px;
   width: calc(100% - 80px);
