@@ -200,9 +200,11 @@ body {
   }
   .main .basic div:nth-of-type(5) {
     left: 373px;
+    z-index: 99;
   }
   .main .basic div:nth-of-type(6) {
     left: 418px;
+    z-index: 98;
   }
   .main .basic div:nth-of-type(7) {
     width: 65%;
@@ -327,7 +329,6 @@ body {
 .main .basic .linkImg {
   width: 25px;
   height: 25px;
-  overflow: hidden;
 }
 @media (min-width: 1440px) {
   .main .basic .linkImg {
@@ -346,10 +347,16 @@ body {
     top: 512px;
   }
 }
+.main .basic .linkImg a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 .main .basic .linkImg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
 }
 .main .experience {
   position: relative;
