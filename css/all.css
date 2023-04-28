@@ -239,16 +239,16 @@ body {
     font-weight: 500;
   }
   .main .basic div:nth-of-type(3) {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 23px;
     letter-spacing: 3%;
-    top: 295px;
+    top: 298px;
   }
   .main .basic div:nth-of-type(4) {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 23px;
     letter-spacing: 3%;
-    top: 339px;
+    top: 340px;
     white-space: pre-line;
   }
   .main .basic div:nth-of-type(5) {
@@ -445,13 +445,13 @@ body {
 @media (min-width: 768px) {
   .main .exBox .exBox1 div {
     padding-left: 40px;
-    padding-right: 40px;
   }
 }
 @media (max-width: 767px) {
   .main .exBox .exBox1 div.exProject, .main .exBox .exBox1 div.exContent {
+    width: calc(100% - 90px);
     padding-left: 30px;
-    padding-right: 40px;
+    padding-right: 60px;
   }
 }
 .main .exBox .exBox1 div {
@@ -546,13 +546,18 @@ body {
 .main .exBox div.exContent {
   color: rgb(189, 189, 189);
   margin-top: 10px;
-  width: 70%;
   overflow: visible;
   white-space: break-spaces;
   font-weight: 400;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .main .exBox div.exContent {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main .exBox div.exContent {
+    width: 95%;
     font-size: 14px;
     line-height: 25px;
     letter-spacing: 0.5px;

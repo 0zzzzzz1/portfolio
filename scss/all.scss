@@ -237,17 +237,17 @@ body{
                 }
     
                 &:nth-of-type(3){ // 縣市
-                    font-size: 16px;
+                    font-size: 15px;
                     line-height: 23px;
                     letter-spacing: 3%;
-                    top: 295px; 
+                    top: 298px; 
                 }
     
                 &:nth-of-type(4){ // 職稱
-                    font-size: 16px;
+                    font-size: 15px;
                     line-height: 23px;
                     letter-spacing: 3%;
-                    top: 339px; 
+                    top: 340px; 
                     white-space: pre-line;
                 }
 
@@ -444,13 +444,13 @@ body{
             @media (min-width: 768px){
                 div{ 
                     padding-left: 40px;
-                    padding-right: 40px;
                 }
             }
             @media (max-width: 767px){
                 div.exProject ,div.exContent{
+                    width: calc(100% - 90px);
                     padding-left: 30px;
-                    padding-right: 40px;
+                    padding-right: 60px;
                 }
             }
 
@@ -556,12 +556,16 @@ body{
             &.exContent{ // 內容
                 color: $color_g2;
                 margin-top: 10px;
-                width: 70%;
                 overflow:visible;
                 white-space:break-spaces;
                 font-weight: 400;
 
-                @media (min-width: 768px){
+                @media (min-width: 1024px){
+                    width: 80%;
+                }
+
+                @media (min-width: 768px) and (max-width: 1023px){
+                    width: 95%;
                     font-size: 14px;
                     line-height: 25px;
                     letter-spacing: 0.5px;
