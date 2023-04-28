@@ -251,8 +251,13 @@ body{
                     white-space: pre-line;
                 }
 
+                &:nth-of-type(5){ // 104 link
+                    z-index: 99;
+                }
+
                 &:nth-of-type(6){ // github link
                     left: 145px;
+                    z-index: 98;
                 }
     
                 &:nth-of-type(7){ // 照片
@@ -311,10 +316,12 @@ body{
 
                 &:nth-of-type(5){ // 104 link
                     right: 75px;
+                    z-index: 99;
                 }
 
                 &:nth-of-type(6){ // github link
                     right: 40px;
+                    z-index: 98;
                 }
     
                 &:nth-of-type(7){ // 照片
