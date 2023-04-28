@@ -235,12 +235,12 @@
   <script>
 
     // 在頁面加載後從 sessionStorage 中讀取滾動位置
-    $(document).ready(function() {
-        var scrollPosition = sessionStorage.getItem('scrollPosition');
-        if (scrollPosition !== null) {
-            $(window).scrollTop(scrollPosition);
-        }
-    });
+    // $(document).ready(function() {
+    //     var scrollPosition = sessionStorage.getItem('scrollPosition');
+    //     if (scrollPosition !== null) {
+    //         $(window).scrollTop(scrollPosition);
+    //     }
+    // });
 
     // 在重新載入頁面時更改 URL
     window.addEventListener('beforeunload', function() {
