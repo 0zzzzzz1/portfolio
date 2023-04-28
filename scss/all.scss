@@ -471,8 +471,8 @@ body{
 
             .exLine{
                 border-left: solid .5px $color_g2;
-                padding-left: 30px;
-                @media (max-width: 1023px){
+                padding-left: 40px;
+                @media (max-width: 1440px){
                     padding-top: 40px;
                 }
             }
@@ -492,7 +492,7 @@ body{
             }
 
             .exBox3{
-                padding-left: 30px;
+                padding-left: 40px;
                 margin-left: 0px;
                 padding-right: 40px;
                 width: calc(100% - 80px); 

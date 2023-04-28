@@ -468,9 +468,9 @@ body {
 }
 .main .exBox .exBox2 .exLine {
   border-left: solid 0.5px rgb(189, 189, 189);
-  padding-left: 30px;
+  padding-left: 40px;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1440px) {
   .main .exBox .exBox2 .exLine {
     padding-top: 40px;
   }
@@ -487,7 +487,7 @@ body {
   height: auto;
 }
 .main .exBox .exBox2 .exBox3 {
-  padding-left: 30px;
+  padding-left: 40px;
   margin-left: 0px;
   padding-right: 40px;
   width: calc(100% - 80px);
