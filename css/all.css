@@ -648,9 +648,12 @@ body {
   overflow: hidden;
   white-space: nowrap;
 }
+.works .worksBox .workBoxS {
+  margin-top: 50px;
+}
 @media (min-width: 768px) {
   .works .worksBox .workBoxS {
-    width: 43.5%;
+    width: 28%;
   }
 }
 @media (max-width: 767px) {
@@ -663,13 +666,16 @@ body {
   object-fit: cover;
   object-position: 0% 50%;
 }
+.works .worksBox .workBoxS .worksImg img video {
+  width: 100%;
+}
 @media (min-width: 768px) {
-  .works .worksBox .workBoxS:nth-child(2) {
+  .works .worksBox .workBoxS:nth-child(2), .works .worksBox .workBoxS:nth-child(3) {
     margin-left: 2.8%;
   }
 }
 @media (max-width: 767px) {
-  .works .worksBox .workBoxS:nth-child(2) {
+  .works .worksBox .workBoxS:nth-child(2), .works .worksBox .workBoxS:nth-child(3) {
     margin-top: 30px;
   }
 }

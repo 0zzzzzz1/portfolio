@@ -697,8 +697,10 @@ body{
 
         // 網頁作品
         .workBoxS { 
+            margin-top: 50px;
+
             @media (min-width: 768px){
-                width: 43.5%; 
+                width: 28%; 
             }
             @media (max-width: 767px){
                 width: 89.8%; 
@@ -708,9 +710,13 @@ body{
                 width: 100%; 
                 object-fit: cover;
                 object-position: 0% 50%;
+
+                video{
+                    width: 100%;
+                }
             }
 
-            &:nth-child(2){ // 第二個作品距離設定
+            &:nth-child(2), &:nth-child(3){ // 第二個作品距離設定
                 @media (min-width: 768px){
                     margin-left: 2.8%;
                 }
