@@ -475,6 +475,9 @@ body{
                 @media (max-width: 1440px){
                     padding-top: 40px;
                 }
+                @media (max-width: 767px){
+                    padding-left: 30px;
+                }
             }
 
             .exProject{ // 調整
@@ -506,6 +509,10 @@ body{
 
                 .exProject{
                     margin-top: 10px;
+                }
+
+                @media (max-width: 767px){
+                    padding-left: 30px;
                 }
             }
         }
@@ -559,6 +566,7 @@ body{
                 overflow:visible;
                 white-space:break-spaces;
                 font-weight: 400;
+                font-size: 14px;
 
                 @media (min-width: 1024px){
                     width: 80%;

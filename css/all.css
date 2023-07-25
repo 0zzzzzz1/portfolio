@@ -476,6 +476,11 @@ body {
   }
 }
 @media (max-width: 767px) {
+  .main .exBox .exBox2 .exLine {
+    padding-left: 30px;
+  }
+}
+@media (max-width: 767px) {
   .main .exBox .exBox2 .exProject {
     margin-top: 0px;
   }
@@ -500,6 +505,11 @@ body {
 }
 .main .exBox .exBox2 .exBox3 .exProject {
   margin-top: 10px;
+}
+@media (max-width: 767px) {
+  .main .exBox .exBox2 .exBox3 {
+    padding-left: 30px;
+  }
 }
 .main .exBox div {
   color: rgb(51, 51, 51);
@@ -549,6 +559,7 @@ body {
   overflow: visible;
   white-space: break-spaces;
   font-weight: 400;
+  font-size: 14px;
 }
 @media (min-width: 1024px) {
   .main .exBox div.exContent {
