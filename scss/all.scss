@@ -344,8 +344,9 @@ body{
         .linkImg{ // link
             width: 25px; height: 25px;
 
+            // top: 395px; 
             @media (min-width: 1440px){
-                top: 395px; 
+                top: 436px; 
             }
             
             @media (min-width: 768px) and (max-width: 1439px){
@@ -354,7 +355,8 @@ body{
             
             @media (max-width: 767px){
                 width: 20px; height: 20px;
-                top: 512px; 
+                top: 510px; 
+                left: 240px;
             }
 
             a{
